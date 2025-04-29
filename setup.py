@@ -1,11 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+import wheel
 
 setup(
-    name="packaging",
+    name="packaging-demo",
     version="0.0.0",
-    packages=["packaging", "packaging.my_folder", "packaging.images"],
+    packages=find_packages(),
     author="Bill Sahlas",
     author_email="bill.sahlas@gmail.com",
     description="My Package course work.",
     license="MIT",
+    install_requires=["numpy"],
 )

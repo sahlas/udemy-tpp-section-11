@@ -1,5 +1,5 @@
 .DS_Store
 build/
 dist/
-packaging.egg-info/
+*.egg-info/
 __pycache__/

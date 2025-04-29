@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import wheel
 
 setup(
-    name="packaging-demo",
+    name="packaging_demo",
     version="0.0.0",
     packages=find_packages(),
     author="Bill Sahlas",

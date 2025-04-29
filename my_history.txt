@@ -1,0 +1,3080 @@
+    1  l
+    2  cd ios-player-samples
+    3  ll
+    4  git status
+    5  ping elemental.vidmark.local
+    6  cd ~/dev-root/pqa-root/pqa-jwt-ui
+    7  startnodedebugmode
+    8  cd ~/Downloads
+    9  ll
+   10  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/
+   11  ffmpeg -re -stream_loop -1 -i -vf  ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/path/to/font.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   12  ffmpeg -re -stream_loop -1 -i -vf  ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/path/to/font.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   13  cd ~/Downloads
+   14  ffmpeg -re -stream_loop -1 -i -vf  ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/path/to/font.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   15  [200~ffmpeg -re -stream_loop -1 -i -f ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/path/to/font.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   16  pwd
+   17  ll
+   18  ffmpeg -re -stream_loop -1 -i -vf ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   19  ffmpeg -re -stream_loop -1 -i -vf "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/
+   20  ffmpeg -re -stream_loop -1 -i -vf ./cc_395989850.mp4 "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"  -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/
+   21  ll
+   22  ll ./cc*
+   23  ffmpeg -re -stream_loop -1 -i -vf ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/  "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   24  ffmpeg -re -stream_loop -1 -i -vf ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   25  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   26  ffmpeg -re -stream_loop -1 -i -f ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/path/to/font.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   27  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   28  ll /usr/share/fonts
+   29  ll /System/Library/Fonts/Times.ttc
+   30  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2
+   31  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf drawtext=fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2
+   32  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf drawtext="fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   33  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf drawtext="fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_2':fontcolor=white:fontsize=24:box=1:boxcolor=black@0.5:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"
+   34  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf drawtext="fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_2'"
+   35  find -f FreeSans.ttf
+   36  find -f *.ttf
+   37  ll
+   38  find -f web_player.har
+   39  find -fR web_player.har
+   40  find -f -r  web_player.har
+   41  find ?
+   42  man find
+   43  find -name . *.ttf
+   44  find / -iname "FreeSans.ttf'
+   45  find / -iname "FreeSans.ttf"
+   46  find / -iname "FreeSans.ttf" 
+   47  which FreeSans.ttf
+   48  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf drawtext="fontfile=/System/Library/Fonts/Geneva.ttf:text='INGEST_1'"
+   49  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=text='INGEST_1'"
+   50  ffmpeg -re -stream_loop -1 -i ./cc_395989850.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=text='INGEST_2'"
+   51  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=text='INGEST_1'"
+   52  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=text='INGEST_2'"
+   53  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ -vf "drawtext=fontsize=60:fontcolor=yellow:text='%{pts\:hms}':x=(w-text_w):y=(h-text_h)"
+   54  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c copy -vf "drawtext=fontsize=60:fontcolor=yellow:text='%{pts\:hms}':x=(w-text_w):y=(h-text_h)" mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   55  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c copy -vf "drawtext=fontsize=60:fontcolor=yellow:text='%{pts\:hms}':x=(w-text_w):y=(h-text_h)" -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   56  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c:a copy -vf "drawtext=fontsize=60:fontcolor=yellow:text='%{pts\:hms}':x=(w-text_w):y=(h-text_h)" -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   57  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -c:a copy -f mpegts srt://6367958869112-1.ingest.live.brightcove.com:5000/ -vf "drawtext=text='INGEST_2'"
+   58  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -i ./ingest_1.png -filter_complex "overlay=10:10" -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   59  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -i ./ingest_1.png -filter_complex "overlay=10:10" -c -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   60  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -i ./ingest_1.png -filter_complex "overlay=10:10" -c copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   61  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -i ./ingest_1.png -filter_complex "overlay=10:10" -c:v copy -c:a copy -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/
+   62  ffmpeg -re -stream_loop -1 -i ./bees_720p.mp4 -i ./ingest_1.png -filter_complex "overlay=10:10" -c copy -bsf:v -f mpegts srt://6367958869112-0.ingest.live.brightcove.com:5000/ 
+   63  chmod +x ./do-ffmpeg-live-stream.sh
+   64  ./do-ffmpeg-live-stream.sh
+   65  ll
+   66  ll ./bees_720p.mp4
+   67  ./do-ffmpeg-live-stream.sh
+   68  brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl shtool texi2html theora wget x264 x265 xvid nasm
+   69  ./do-ffmpeg-live-stream.sh
+   70  ps -eaf |grep ffmpeg
+   71  ps -e |grep ffmpeg
+   72  ps -f |grep ffmpeg
+   73  ps  |grep ffmpeg
+   74  kill 11434 11435
+   75  ps  |grep ffmpeg
+   76  kill 12908
+   77  ./do-ffmpeg-live-stream.sh
+   78  kill 11434 11435
+   79  ./do-ffmpeg-live-stream.sh
+   80  kill 12908
+   81  ./do-ffmpeg-live-stream.sh
+   82  ps  |grep ffmpeg
+   83  kill 13179
+   84  ./do-ffmpeg-live-stream.sh
+   85  ps  |grep ffmpeg
+   86  kill 13653
+   87  ps  |grep ffmpeg
+   88  kill 13920
+   89  ps  |grep ffmpeg
+   90  kill 15414
+   91  ps  |grep ffmpeg
+   92  ./do-ffmpeg-live-stream.sh
+   93  ./do-ffmpeg-live-stream.sh
+   94  ps  |grep ffmpeg
+   95  kill 15413 16887
+   96  cd ~/dev-root/ios-sdk/agave/test/uitests
+   97  ll
+   98  cd BCOVBCIPlayer
+   99  ll
+  100  pod update
+  101  ll
+  102  iosworkspace
+  103  git status
+  104  git stash
+  105  git checkout develop 
+  106  git pull upstream develop 
+  107  ssh-add ~/.ssh/bsahlas_brightcove_account_rsa
+  108  git pull upstream develop 
+  109  iosclean
+  110  ll
+  111  git stastus
+  112  git status
+  113  pod update
+  114  iosworkspace
+  115  git status
+  116  git checkout develop 
+  117  git branch
+  118  git pull upstream develop 
+  119  git checkout -b fix_project_errors
+  120  cd ../BCOVIMAPlayer
+  121  pod update
+  122  iosworkspace
+  123  iosclean
+  124  git status
+  125  git diff BCOVIMAPlayer/VideoViewController.swift
+  126  git add BCOVIMAPlayer/VideoViewController.swift
+  127  git commit
+  128  git commit -m "fix code in test after sdk changes."
+  129  git push origin fix_project_errors 
+  130  git status
+  131  git checkout develop 
+  132  git pull upstream develop 
+  133  git branch
+  134  git checkout pqa_1351 
+  135  cd ..
+  136  ll
+  137  cd BCOVTVOSPlayback
+  138  git status
+  139  git merge develop 
+  140  git status
+  141  pod update
+  142  pwd
+  143  ll
+  144  iosworkspace
+  145  git status
+  146  git checkout .
+  147  git status
+  148  ll
+  149  iosclean
+  150  pod update
+  151  iosworkspace
+  152  iosclean
+  153  git status
+  154  git add .
+  155  git commit -m "clean up"
+  156  git push origin pqa_1351 
+  157  pod update
+  158  iosworkspace
+  159  chmod +x pqa-run-tvos-xcuitests.sh
+  160  code .
+  161  ll
+  162  cd ../../../
+  163  ll
+  164  cd ./test/uitests/BCOVTVOSPlayback
+  165  cd ../../
+  166  cd ./test/uitests/BCOVTVOSPlayback
+  167  ll
+  168  ../../../bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  169  pwd
+  170  cd ../../
+  171  cd ../
+  172  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  173  brew install xcbeautify
+  174  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  175  cd ../../
+  176  cd ../
+  177  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  178  pwd
+  179  cd test/uitests/BCOVTVOSPlayback
+  180  ll
+  181  iosworkspace
+  182  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  183  cd ../
+  184  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  185  cd ../..
+  186  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  187  open .
+  188  pwd
+  189  cd ~/dev-root/ios-sdk/agave/test/uitests/BCOVTVOSPlayback
+  190  l
+  191  iosworkspace
+  192  cd ../../
+  193  cd ../
+  194  ./bin/scripts/pqa-run-tvos-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback 
+  195  code .
+  196  cd ./test/uitests/BCOVTVOSPlayback
+  197  iosclean
+  198  git status
+  199  cd ../../
+  200  git status
+  201  cd ../
+  202  git status
+  203  ll
+  204  open .
+  205  git status
+  206  git add ./bin/scripts/pqa-run-tvos-xcuitests.sh
+  207  git add .ci/XCUITestRunnerCoreOnTVOSSimulator
+  208  ll
+  209  git status
+  210  git diff ./b
+  211  git diff ./bin
+  212  git checkout ./bin/scripts/pqa-run-xcuitests.sh
+  213  git status
+  214  git diff ./test/uitests/BCOVTVOSPlayback
+  215  git diff ./test/uitests/BCOVTVOSPlayback.xctestplan
+  216  git add test/uitests/BCOVTVOSPlayback.xctestplan
+  217  git status
+  218  git commit -m "scripts for automation and updated testplan"
+  219  git push origin pqa_1351 
+  220  git status
+  221  git diff .ci/XCUITestRunnerCoreOnTVOSSimulator
+  222  git add .ci/XCUITestRunnerCoreOnTVOSSimulator
+  223  git add ./bin/scripts/tvos
+  224  git status
+  225  git add bin/scripts/pqa-run-tvos-xcuitests.sh
+  226  git commit -m "move files to proper location"
+  227  git status
+  228  git push origin pqa_1351 
+  229  git status
+  230  cd ./test/uitests/BCOVBCIPlayer
+  231  iosclean
+  232  cd ../BCOVTVOSPlayback
+  233  ll
+  234  pod update
+  235  iosworkspace
+  236  cd ~/dev-root/ios-sdk
+  237  ll
+  238  cd ios-player-samples
+  239  cd ./Player
+  240  ll
+  241  cd AppleTV
+  242  ll
+  243  iosworkspace
+  244  git status 
+  245  git diff BCOVTVOSPlayback/VideoViewController.swift
+  246  git status
+  247  iosclean
+  248  git status
+  249  git diff .
+  250  code .
+  251  git diff .
+  252  git add .
+  253  git status
+  254  git diff ../common
+  255  code ../common
+  256  git diff ../common
+  257  git add ../common/tvOS
+  258  git status
+  259  git commit -m "updates from peer review and new tests"
+  260  git push origin pqa_1351 
+  261  cd ../BCOVLivePlayer
+  262  ll
+  263  iosworkspace
+  264  iosclean
+  265  ll
+  266  pod update
+  267  iosworkspace
+  268  cd ../BCOVTVOSPlayback
+  269  ll
+  270  pod update
+  271  iosworkspace
+  272  cd ../
+  273  ll
+  274  cd BCOVTVOSPlayback
+  275  iosclean
+  276  cd ~/dev-root/ios-sdk/agave
+  277  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  278  pwd
+  279  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  280  open  .
+  281  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  282  ll
+  283  iosworkspace
+  284  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  285  iosworkspace
+  286  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  287  iosworkspace
+  288  ./bin/scripts/tvos/pqa-run-xcuitests.sh -p BCOVTVOSPlayback -s BCOVTVOSPlayback
+  289  ll
+  290  iosworkspace
+  291  ll
+  292  iosclean
+  293  git status
+  294  git diff ./b
+  295  git diff ./bin
+  296  git add ./bin/scripts/tvos
+  297  git status
+  298  code ./test/uitests/BCOVTVOSPlayback
+  299  git diff test/uitests/BCOVTVOSPlayback/BCOVTVOSPlayback.xcodeproj/project.pbxproj
+  300  git add test/uitests/BCOVTVOSPlayback/BCOVTVOSPlayback.xcodeproj/project.pbxproj
+  301  git add test/uitests/BCOVTVOSPlayback/BCOVTVOSPlayback.xcodeproj/xcshareddata/xcschemes/BCOVTVOSPlayback.xcscheme
+  302  git status
+  303  git add ./test/uitests/BCOVTVOSPlayback
+  304  git status
+  305  git commit -m "Post PR review updates."
+  306  git push origin pqa_1351 
+  307  pwd
+  308  git status
+  309  cd ./test/uitests/BCOVBCIPlayer
+  310  ll
+  311  pod update
+  312  iosworkspace
+  313  git status
+  314  git checkout develop 
+  315  git pull upstream develop 
+  316  git status
+  317  cd ../BCOVTVOSPlayback
+  318  git stash
+  319  git checkout -b tvos_fix_ci_report_path
+  320  git stash pop
+  321  git diff ../../../.ci/XCUITestRunnerCoreOnTVOSSimulator
+  322  git status
+  323  git add ../../../.ci/XCUITestRunnerCoreOnTVOSSimulator
+  324  git commit -m "Fix the path to the project rootdir."
+  325  git push origin tvos_fix_ci_report_path 
+  326  git stash
+  327  git checkout develop 
+  328  git pull upstream develop 
+  329  git checkout -b fix_ci_script_path_02
+  330  git stash pop
+  331  git diff ../../../.ci/XCUITestRunnerCoreOnTVOSSimulator
+  332  git add ../../../.ci
+  333  git commit -m "This should do it."
+  334  git push origin fix_ci_script_path_02 
+  335  git checkout develop 
+  336  git pull upstream develop 
+  337  git status
+  338  git checkout -b pqa_1354
+  339  git branch
+  340  git branch -d pqa_1351
+  341  git branch -d tvos_fix_ci_report_path 
+  342  git branch -d ima_test_fix 
+  343  git branch -d fix_ci_script_path_02 
+  344  git branch -d fix_project_errors 
+  345  git branch
+  346  ll
+  347  pod update
+  348  iosworkspace
+  349  cd ./test/uitests/BCOVLivePlayer
+  350  ll
+  351  iosworkspace
+  352  ll
+  353  code .
+  354  pod update
+  355  iosworkspace
+  356  code .
+  357  pod update
+  358  iosworkspace
+  359  iosclean
+  360  swift package init --name MyCLI --type executable
+  361  swift package init --name test --type executable
+  362  ll
+  363  cd ..
+  364  ll
+  365  open .
+  366  cd ./BC-65297-Validation-7.0.0
+  367  ll
+  368  code .
+  369  pod update
+  370  iosworkspace
+  371  iosclean
+  372  pod update
+  373  iosworkspace
+  374  iosclean
+  375  pod update
+  376  iosworkspace
+  377  iosclean
+  378  git status
+  379  pod update
+  380  iosworkspace
+  381  iosclean
+  382  pod update
+  383  iosworkspace
+  384  cd ..
+  385  git status
+  386  pwd
+  387  cd BCOVLivePlayer
+  388  ll
+  389  iosworkspace
+  390  cd BCOVTVOSPlaybackSwiftUI
+  391  iosclean
+  392  ll
+  393  code .
+  394  pod update
+  395  iosworkspace
+  396  pwd
+  397  ll
+  398  iosworkspace
+  399  pwd
+  400  ll
+  401  cd ../
+  402  ll
+  403  cd BCOVTVOSPlaybackSwiftUI
+  404  iosclean
+  405  ll
+  406  code .
+  407  pod update
+  408  iosworkspace
+  409  cd ../BCOVTVOSPlayback
+  410  git status
+  411  git checkout .
+  412  iosclean
+  413  ll
+  414  iosworkspace
+  415  git status .
+  416  iosclean
+  417  pod update
+  418  iosworkspace
+  419  git status
+  420  iosclean
+  421  git reset
+  422  git status
+  423  git checkout .
+  424  git status
+  425  ll
+  426  pod update
+  427  iosworkspace
+  428  iosclean
+  429  git status
+  430  cd ../BCOVBCIPlayer
+  431  iosclean
+  432  cd ../BCOVLivePlayer
+  433  iosclean
+  434  git status
+  435  cd ../
+  436  git status
+  437  git checkout develop 
+  438  git pull upstream develop 
+  439  git checkout -b pqa-1447
+  440  git status
+  441  open .
+  442  git status
+  443  cd BCOVTVOSPlayback
+  444  ll
+  445  pod update
+  446  iosworkspace
+  447  pwd
+  448  git status
+  449  cd ../BCOVTVOSPlaybackSwiftUI
+  450  ll
+  451  iosclean
+  452  pwd
+  453  ll
+  454  pod update
+  455  ll
+  456  code .
+  457  iosclean
+  458  pod update
+  459  iosworkspace
+  460  git status
+  461  cd ..
+  462  git statu
+  463  git status
+  464  cd BCOVTVOSPlayback
+  465  iosclean
+  466  git status
+  467  git diff .
+  468  code ./BCOVTVOSPlayback
+  469  git diff .
+  470  git stash
+  471  git checkout develop 
+  472  git pull upstream develop 
+  473  git checkout -b fix_up
+  474  git stash pop
+  475  git diff
+  476  git add BCOVTVOSPlayback
+  477  git status
+  478  git commit -m "Fixes automation tests."
+  479  git push origin fix_up 
+  480  git checkout develop 
+  481  git pull upstream develop 
+  482  git branch -d fix_up 
+  483  ll
+  484  code .
+  485  pwd
+  486  cd ../BCOVTVOSPlaybackSwiftUI
+  487  ll
+  488  iosworkspace
+  489  pwd
+  490  pod update
+  491  iosworkspace
+  492  cd ~/dev-root/ios-sdk/apple-sample-code/tvos
+  493  ll
+  494  open .
+  495  pwd
+  496  cd ../../
+  497  cd agave/test/uitests/BCOVBCIPlayer
+  498  ll
+  499  pod update
+  500  iosworkspace
+  501  git status
+  502  git diff ../common/tvOS/VideoPlayerComponents.swift
+  503  git status
+  504  git diff BCOVTVOSPlaybackUITests/BCOVTVOSPlaybackUITests.swift
+  505  git status
+  506  git diff ../common/tvOS/VideoPlayerComponents.swift
+  507  iosworkspace
+  508  git status
+  509  open .
+  510  cd ../../../../
+  511  code .
+  512  pwd
+  513  ll
+  514  pwd
+  515  cp ./cf ./zagave/cf
+  516  cd zagave
+  517  ll
+  518  chmod +x cf
+  519  ll
+  520  ./cf agave
+  521  ll
+  522  cd agave
+  523  ll
+  524  git status
+  525  cd ./test/uitests/
+  526  ll
+  527  open .
+  528  cd ../../
+  529  cd ../
+  530  open .
+  531  ./cf agave
+  532  ll
+  533  cd agave
+  534  ll
+  535  git status
+  536  cd test/uitests
+  537  ll
+  538  cd BCOVTVOSPlayback
+  539  pod update
+  540  iosworkspace
+  541  cd ../../../
+  542  cd ~/dev-root
+  543  ll
+  544  cd ios-sdk
+  545  ll
+  546  cd __agave
+  547  ll
+  548  git status
+  549  cd test/uitests/BCOVTVOSPlayback
+  550  ll
+  551  iosclean
+  552  cd ~/dev-root/ios-sdk/agave
+  553  ll
+  554  git branch
+  555  git checkout -b pqa-1450
+  556  ll
+  557  cd test/uitests/BCOVTVOSPlayback
+  558  pod update
+  559  iosworkspace
+  560  cd ~/dev-root/ios-sdk/agave/test/uitests/BCOVSSAIPlayer
+  561  pod update
+  562  iosworkspace
+  563  pwd
+  564  ll
+  565  iosclean
+  566  pod update
+  567  iosworkspace
+  568  cd ../../../
+  569  cd ../ios-player-samples
+  570  ll
+  571  cd SSAI
+  572  ll
+  573  cd BasicSSAIPlayer-tvOS
+  574  ll
+  575  pod update
+  576  iosworkspace
+  577  iosclean
+  578  cd ~/dev-root/ios-sdk/agave
+  579  git sttus
+  580  git status
+  581  cd ./test/uitests/BCOVTVOSPlayback
+  582  iosclean
+  583  open ~/Library/Caches/com.apple.dt.Xcode
+  584  open ~/Library/Caches/
+  585  iosclean
+  586  git status
+  587  git stash
+  588  git status
+  589  git checkout develop 
+  590  git pull develop
+  591  git pull upstream develop
+  592  git branch
+  593  pod update
+  594  iosworkspace
+  595  iosclean
+  596  git checkout pqa-1450 
+  597  git merge develop 
+  598  git stash pop
+  599  pod update
+  600  iosclean
+  601  git stash
+  602  git status
+  603  git checkout develop 
+  604  git checkout -b fix_tvos_tests
+  605  ll
+  606  pod update
+  607  iosworkspace
+  608  iosclean
+  609  git status
+  610  git diff
+  611  code ../common/tvOS
+  612  git diff
+  613  git status
+  614  git add ../common/tvOS/AnnotationHelper.swift
+  615  git commit -m "Fix test to compiler error."
+  616  git push origin fix_tvos_tests 
+  617  git status
+  618  git checkout pqa-1450 
+  619  git stash pop
+  620  ll
+  621  pod update
+  622  iosworkspace
+  623  git status
+  624  iosworkspace
+  625  git status
+  626  git diff BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  627  git checkout BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  628  git diff BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  629  ll
+  630  git status
+  631  ll
+  632  iosworkspace
+  633  git diff BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  634  git status
+  635  iosclean
+  636  cd ../BCOVBCIPlayer
+  637  ll
+  638  pod update
+  639  iosworkspace
+  640  pwd
+  641  ll
+  642  git status
+  643  git diff BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  644  iosclean
+  645  ll
+  646  cd ../
+  647  git status
+  648  cd BCOVBCIPlayer
+  649  iosclean
+  650  cd ../
+  651  git status
+  652  git diff BCOVTVOSPlayback/BCOVTVOSPlayback.xcodeproj/project.pbxproj
+  653  git add BCOVTVOSPlayback/BCOVTVOSPlayback.xcodeproj/project.pbxproj
+  654  git add BCOVTVOSPlayback/BCOVTVOSPlayback/BCOVTVOSPlayback.xctestplan
+  655  git diff BCOVTVOSPlayback/BCOVTVOSPlayback/Base.lproj/Main.storyboard
+  656  git add BCOVTVOSPlayback/BCOVTVOSPlayback/Base.lproj/Main.storyboard
+  657  git diff BCOVTVOSPlayback/BCOVTVOSPlayback/VideoViewController.swift
+  658  cd ../
+  659  cd BCOVTVOSPlayback
+  660  code .
+  661  git diff BCOVTVOSPlayback/BCOVTVOSPlayback/VideoViewController.swift
+  662  git add BCOVTVOSPlayback/BCOVTVOSPlayback/VideoViewController.swift
+  663  git status
+  664  git diff BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCIConstructs.swift
+  665  git status
+  666  git diff BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCIConstructs.swift
+  667  git diff common/BCIConstructs.swift
+  668  git add common/BCIConstructs.swift
+  669  git diff common/BaseConstructs.swift
+  670  git add common/BaseConstructs.swift
+  671  git stastus
+  672  git status
+  673  git diffcommon/tvOS/AnnotationHelper.swift
+  674  git diff common/tvOS/AnnotationHelper.swift
+  675  git add common/tvOS/AnnotationHelper.swift
+  676  git status
+  677  git diff common/SSAIConstructs.swift
+  678  code .
+  679  git diff common/SSAIConstructs.swift
+  680  git add common/SSAIConstructs.swift
+  681  git diff common/tvOS
+  682  git add common/tvOS
+  683  git status
+  684  git diff BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCOVTVOSPlaybackUITests.swift
+  685  git status
+  686  git add ./BCOVTVOSPlayback
+  687  git status
+  688  git commit -m "New SSAI tests for tvOS automation project."
+  689  git push origin pqa-1450 
+  690  pwd
+  691  cd ~/dev-root
+  692  ll
+  693  cd sandbox
+  694  ll
+  695  git clone git@bithub.brightcove.com:playback/concurrency-service.git
+  696  ll
+  697  cd concurrency-service
+  698  code .
+  699  pwd
+  700  git status
+  701  cd BCOVTVOSPlayback
+  702  ll
+  703  pod update
+  704  iosworkspace
+  705  pwd
+  706  ll
+  707  cd ../
+  708  cd BCOVSSAIPlayer
+  709  ll
+  710  pod update
+  711  iosworkspace
+  712  iosclean
+  713  cd ../
+  714  pwd
+  715  cd BCOVBCIPlayer
+  716  pod update
+  717  iosworkspace
+  718  iosclean
+  719  cd ../BCOVTVOSPlayback
+  720  iosclean
+  721  pwd
+  722  ll
+  723  cd ../
+  724  git status
+  725  git diff
+  726  cd BCOVSSAIPlayer
+  727  iosclean
+  728  cd ../
+  729  git status
+  730  git diff
+  731  git status
+  732  git diff ./common
+  733  git add ./common
+  734  ll
+  735  git status
+  736  git diff BCOVBCIPlayer
+  737  git add BCOVBCIPlayer
+  738  git status
+  739  git add BCOVTVOSPlayback/BCOVTVOSPlayback/Base.lproj/Main.storyboard
+  740  git diff BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCOVTVOSPlaybackUITests.swift
+  741  git add BCOVTVOSPlayback/BCOVTVOSPlayback/Base.lproj/Main.storyboard
+  742  git diff BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCOVTVOSPlaybackUITests.swift
+  743  git add BCOVTVOSPlayback/BCOVTVOSPlaybackUITests/BCOVTVOSPlaybackUITests.swift
+  744  git status
+  745  git diff
+  746  git add BCOVTVOSPlayback/BCOVTVOSPlayback/VideoViewController.swift
+  747  git commit -m "Some cleanup and new test steps from associated ticket SDK-2738"
+  748  git push origin pqa-1450 
+  749  git checkout develop 
+  750  git pull upstream develop 
+  751  git status
+  752  git pull upstream develop 
+  753  git checkout -b fix_automation_framework
+  754  code .
+  755  cd BCOVBCIPlayer
+  756  pod updte
+  757  pod update
+  758  cd ~/dev-root/ios-sdk/agave/test/uitests
+  759  cd BCOVTVOSPlayback
+  760  pod update
+  761  cd ../
+  762  cd BCOVBRDCoverage
+  763  pod update
+  764  iosworkspace
+  765  git status .
+  766  git diff .
+  767  iosclean
+  768  cd ../BCOVFWPlayerSwift
+  769  pod update
+  770  iosclean
+  771  cd ../BCOVIMAPlayer
+  772  pod update
+  773  cd ../
+  774  ll
+  775  cd BCOVDAIPlayer
+  776  pod update
+  777  iosworkspace
+  778  iosclean
+  779  iosclean ll
+  780  iosclean
+  781  cd ../
+  782  ll
+  783  cxd BCOVPulsePlayer
+  784  cd BCOVPulsePlayer
+  785  pod update
+  786  iosworkspace
+  787  iosclean
+  788  git status
+  789  cd ../BCOVBCIPlayer
+  790  ll
+  791  iosworkspace
+  792  iosclean
+  793  git status
+  794  cd ../
+  795  git status
+  796  git diff BCOVTVOSPlayback
+  797  git diff
+  798  git add .
+  799  git commit -m "Move 'SeekTime' class back down to common base class."
+  800  git push origin fix_automation_framework 
+  801  ll
+  802  code .
+  803  pod update
+  804  iosworkspace
+  805  cd ../BCOVBCIPlayer
+  806  ll
+  807  pod update
+  808  iosworkspace
+  809  git status
+  810  ioclasscount
+  811  iosclean
+  812  cd ../BCOVPulsePlayer
+  813  pod update
+  814  iosworkspace
+  815  iosclean
+  816  pwd
+  817  cd ../
+  818  ll
+  819  cd BCOVIMAPlayer
+  820  pod update
+  821  iosworkspace
+  822  iosclean
+  823  pwd
+  824  ll
+  825  git status
+  826  git checkout develop 
+  827  git pull upstream develop 
+  828  cd ../
+  829  cd BCOVLivePlayer
+  830  l
+  831  pod update
+  832  iosworkspace
+  833  iosclean
+  834  cd ../
+  835  git status
+  836  git checkout -b fix_tvos_tests
+  837  cd BCOVTVOSPlayback
+  838  pod update
+  839  iosworkspace
+  840  git status
+  841  git diff ../common/tvOS/BCIConstructs.swift
+  842  iosclean
+  843  pod update
+  844  iosworkspace
+  845  cd ~/dev-root/pqa-root
+  846  ll
+  847  cd pqa-jwt-ui
+  848  startnodedebugmode
+  849  iosclean
+  850  ll
+  851  git status
+  852  git diff ./
+  853  cd ..
+  854  git diff
+  855  cd BCOVTVOSPlayback
+  856  pod update
+  857  iosworkspace
+  858  iosclean
+  859  ll
+  860  git status
+  861  cd ../
+  862  git diff
+  863  git add .
+  864  git commit -m "Remove reference to a file in wrong path."
+  865  git reset
+  866  git status
+  867  git reset
+  868  git status
+  869  it reset --soft HEAD^
+  870  git reset --soft HEAD^
+  871  git status
+  872  git reset
+  873  git status
+  874  git stash
+  875  history
+  876  git checkout -b fix_tvos_tests
+  877  git branch
+  878  git branch -d fix_tvos_tests 
+  879  git branch
+  880  git branch -d fix_automation_framework 
+  881  git checkout -b tvos_path_cleanup
+  882  git stash pop
+  883  git diff
+  884  git add .
+  885  git commit -m "Cleanup path references in proj file."
+  886  git push origin tvos_path_cleanup 
+  887  ll
+  888  cd BCOVTVOSPlayback
+  889  ll
+  890  pod update
+  891  iosworkspace
+  892  iosclean
+  893  git status
+  894  git diff
+  895  cd ../
+  896  git status
+  897  git diff
+  898  git add .
+  899  git commit -m "Fix typo"
+  900  git status
+  901  git push origin  tvos_path_cleanup 
+  902  cd BCOVBCIPlayer
+  903  pod update
+  904  iosworkspace
+  905  git status
+  906  iosclean
+  907  git status
+  908  git checkout develop 
+  909  git pull upstream develop 
+  910  cd ../BCOVLivePlayer
+  911  ll
+  912  iosworkspace
+  913  cd ../BCOVTVOSPlayback
+  914  pod update
+  915  iosworkspace
+  916  cd ../BCOVLivePlayer
+  917  iosworkspace
+  918  ll
+  919  pod update
+  920  iosworkspace
+  921  cd ../
+  922  code .
+  923  git status
+  924  git diff common/BaseConstructs.swift
+  925  cd ./BCOVTVOSPlayback
+  926  iosclean
+  927  git status .
+  928  git diff .
+  929  git checkout .
+  930  pod update
+  931  iosworkspace
+  932  iosclean
+  933  git status
+  934  cd ../
+  935  cd BCOVLivePlayer
+  936  iosclean
+  937  git status
+  938  cd ../
+  939  git status
+  940  git diff
+  941  git checkout .
+  942  git stastus
+  943  git status
+  944  cd ../
+  945  cd ~/dev-root
+  946  ll
+  947  cd ios-sdk
+  948  ll
+  949  cd ios-player-samples
+  950  ll
+  951  git status
+  952  cd Player/DVRLive
+  953  ll
+  954  iosclean
+  955  ll
+  956  git status
+  957  git diff .
+  958  git status
+  959  git diff Podfile
+  960  git diff DVRLive.xcodeproj/project.pbxproj
+  961  git checkout ./DVRLive.xcodeproj
+  962  git status
+  963  pod update
+  964  iosworkspace
+  965  cd ..
+  966  ll
+  967  cd VideoCloudBasicPlayer/
+  968  ll
+  969  iosclean
+  970  ll
+  971  cat Podfile
+  972  pod update
+  973  ll
+  974  iosworkspace
+  975  cd ../DVRLive
+  976  ll
+  977  iosclean
+  978  ll
+  979  cd ../
+  980  open .
+  981  cd DVRLive
+  982  ll
+  983  pod update
+  984  iosworkspace
+  985  cdcd ../../
+  986  cd ../../
+  987  cd ../
+  988  cd agave/test/uitests/BCOVTVOSPlayback
+  989  pod update
+  990  iosworkspace
+  991  git status
+  992  cd ../
+  993  git pull upstream develop 
+  994  ssh-add ~/.ssh/bsahlas_brightcove_account_rsa
+  995  git pull upstream develop 
+  996  cd BCOVBCIPlayer
+  997  pod update
+  998  iosworkspace
+  999  8;2~pod update
+ 1000  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ 1001  pwd
+ 1002  ll
+ 1003  cd ~
+ 1004  ll
+ 1005  pwd
+ 1006  code .
+ 1007  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ 1008  pwd
+ 1009  ll
+ 1010  pwd
+ 1011  ll
+ 1012  cd development
+ 1013  ll
+ 1014  cd repos
+ 1015  ll
+ 1016  cd pqa-root/
+ 1017  ll
+ 1018  cd pqa-jwt-ui
+ 1019  ll
+ 1020  open .
+ 1021  git
+ 1022  git init .
+ 1023  pwd
+ 1024  cd development
+ 1025  cd repos
+ 1026  ll
+ 1027  cd ../
+ 1028  git clone git@github.com:sahlas/pqa-utils.git
+ 1029  pwd
+ 1030  ll
+ 1031  ssh-add ~/.ssh/bill_sahlas_gmail_github
+ 1032  ssh-keygen -t ed25519 -C "bill.sahlas@gmail.com"
+ 1033  eval "$(ssh-agent -s)"
+ 1034  open ~/.ssh/config
+ 1035  pwd
+ 1036  ll ~/.ssh
+ 1037  ssh-add --apple-use-keychain ~/.ssh/bill_sahlas_gmail
+ 1038  history
+ 1039  git clone git@github.com:sahlas/pqa-utils.git
+ 1040  gh ssh-key add ~/.ssh/bill_sahlas_gmail.pub --type signing
+ 1041  pbcopy  ~/.ssh/bill_sahlas_gmail.pub
+ 1042  git clone git@github.com:sahlas/pqa-utils.git
+ 1043  ll
+ 1044  open .
+ 1045  pwd
+ 1046  ll
+ 1047  git status
+ 1048  git clone git@github.com:sahlas/pqa-utils.git
+ 1049  ssh -vT git@github.com\n
+ 1050  ssh -T sahlas@github.com
+ 1051  ssh -vT git@github.com\n
+ 1052  ssh -T sahlas@github.com
+ 1053  ssh -vT git@github.com\n
+ 1054  git clone git@github.com:sahlas/pqa-utils.git
+ 1055  ssh-add ~/.ssh/bill_sahlas_gmail
+ 1056  git clone git@github.com:sahlas/pqa-utils.git
+ 1057  ssh -vT git@github.com\n
+ 1058  ssh -T sahlas@github.com
+ 1059  ls -al ~/.ssh
+ 1060  ssh -vT git@github.com
+ 1061  ssh -T sahlas@github.com
+ 1062  git@github.com:sahlas/pqa-utils.git
+ 1063  git clone git@github.com:sahlas/pqa-utils.git
+ 1064  ll
+ 1065  open .
+ 1066  pwd
+ 1067  npm install -g npm
+ 1068  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+ 1069  command -v nvm
+ 1070  nvm install node
+ 1071  nvm use node
+ 1072  ll
+ 1073  nmp install
+ 1074  brew install npm
+ 1075  ll
+ 1076  nmp install
+ 1077  npm install
+ 1078  npm install -g npm@11.2.0
+ 1079  nmp install
+ 1080  npm install
+ 1081  open .
+ 1082  startnodedebugmode
+ 1083  ll
+ 1084  pwd
+ 1085  code .
+ 1086  pwd
+ 1087  code .
+ 1088  ll
+ 1089  code .
+ 1090  pwd
+ 1091  npm profile set email
+ 1092  npm profile set email bill.sahlas@gmail.com
+ 1093  ll
+ 1094  git status
+ 1095  git init .
+ 1096  git status
+ 1097  git add .
+ 1098  git commit -m "PR 03-27-2025: first branch"
+ 1099  git push origin main
+ 1100  git push main
+ 1101  branch
+ 1102  git branch
+ 1103  git push main
+ 1104  ssh-add ~/.ssh/bill_sahlas_gmail
+ 1105  git push main
+ 1106  pwd
+ 1107  cd ../
+ 1108  ll
+ 1109  git clone git@github.com:sahlas/pqa-utils.git
+ 1110  open .
+ 1111  git status
+ 1112  pwd
+ 1113  ll
+ 1114  cd pqa-utils
+ 1115  ll
+ 1116  git status
+ 1117  git add .
+ 1118  git commit -m "PR 03-27-2025: first branch"
+ 1119  git push origin main
+ 1120  ll
+ 1121  LL
+ 1122  ll
+ 1123  open .
+ 1124  git pull origin main
+ 1125  open .
+ 1126  pwd
+ 1127  pull 
+ 1128  git pull origin main
+ 1129  git checkout -b develop
+ 1130  git merge main 
+ 1131  git push origin develop 
+ 1132  git checkout main 
+ 1133  git branch -m main master
+ 1134  git push
+ 1135  git push master
+ 1136  git push orign master
+ 1137  git branch -ar
+ 1138  git branch -m main master
+ 1139  git branch -a
+ 1140  git commit -m "rename main to master"
+ 1141  git push origin/master
+ 1142  git push master
+ 1143  git push origin --delete main
+ 1144  git push origin -u master
+ 1145  history
+ 1146  startnodedebugmode
+ 1147  pwd
+ 1148  ll
+ 1149  cd repos
+ 1150  ll
+ 1151  cd pqa-root
+ 1152  ll
+ 1153  cd pqa-utils
+ 1154  startnodedebugmode
+ 1155  curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+ 1156  /usr/bin/python3 /Users/bsahlas/development/repos/interview/pythonScripts/CtCi13.py
+ 1157  pm init playwright@latest --yes "--" . '--quiet' '--browser=chromium' '--browser=firefox' '--browser=webkit' '--gha'
+ 1158  omz update
+ 1159  node version
+ 1160  node -version
+ 1161  node --version
+ 1162  pwd
+ 1163  ll
+ 1164  git status
+ 1165  cd ../
+ 1166  cd pqa-utils
+ 1167  git checkout develop 
+ 1168  git status
+ 1169  cd dev
+ 1170  ll
+ 1171  cd ~/development
+ 1172  ll
+ 1173  cd repos
+ 1174  ll
+ 1175  git clone git@github.com:LinkedInLearning/learning-playwright-5911873.git
+ 1176  ll
+ 1177  cd learning-playwright-5911873
+ 1178  ll
+ 1179  code .
+ 1180  cd ..
+ 1181  ll
+ 1182  cd pqa-root
+ 1183  ll
+ 1184  code .
+ 1185  pwd
+ 1186  cd ../../
+ 1187  ll
+ 1188  cd learning-playwright-5911873
+ 1189  ll
+ 1190  git checkout 01_01b
+ 1191  npm inirt playwright@latest
+ 1192  npm init playwright@latest
+ 1193  npx playwright test
+ 1194  code .
+ 1195  git status
+ 1196  git checkout 01_03b
+ 1197  git stash
+ 1198  git checkout 01_03b
+ 1199  git stash pop
+ 1200  npx playwright test --project chromium
+ 1201  npx playwright test --headed
+ 1202  npx playwright test --project chromium
+ 1203  npx playwright test --project chromium --headed
+ 1204  npx playwright test --project "*omuim"
+ 1205  npx playwright test --project "*omium"
+ 1206  npx playwright test test
+ 1207  npx playwright test tests/example.spec.ts
+ 1208  npx playwright test tests/example.spec.ts :10
+ 1209  npx playwright test tests/example.spec.ts :09
+ 1210  npx playwright test tests/example.spec.ts:09
+ 1211  npx playwright test tests/example.spec.ts:10
+ 1212  npx playwright test --grep @first
+ 1213  npx playwright show-report
+ 1214  npx playwright test --grep-invert @first
+ 1215  npx playwright show-report
+ 1216  npm test
+ 1217  npm test:chromium
+ 1218  npm run test:chromium
+ 1219  npm run test:local
+ 1220  npm run test:ui
+ 1221  npx playwright codegen
+ 1222  git status
+ 1223  git branch
+ 1224  git fetch all
+ 1225  git fetch --all
+ 1226  git branch
+ 1227  npx playwright test tests/home.spec.ts
+ 1228  npx playwright test tests/home.spec.ts:8
+ 1229  npx playwright test tests/home.spec.ts:7
+ 1230  npx playwright show-report
+ 1231  npx playwright test tests/home.spec.ts --update-snapshots
+ 1232  npx playwright test tests/home.spec.ts:7
+ 1233  npx playwright test tests/home.spec.ts --update-snapshots
+ 1234  npx playwright show-report
+ 1235  npx playwright test tests/home.spec.ts --update-snapshots
+ 1236  curl 'https://api.practicesoftwaretesting.com/categories/tree' \\n  -H 'Accept: application/json, text/plain, */*' \\n  -H 'Accept-Language: en-US,en;q=0.9' \\n  -H 'Connection: keep-alive' \\n  -H 'Content-Type: application/json' \\n  -H 'Origin: https://practicesoftwaretesting.com' \\n  -H 'Referer: https://practicesoftwaretesting.com/' \\n  -H 'Sec-Fetch-Dest: empty' \\n  -H 'Sec-Fetch-Mode: cors' \\n  -H 'Sec-Fetch-Site: same-site' \\n  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36' \\n  -H 'sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"' \\n  -H 'sec-ch-ua-mobile: ?0' \\n  -H 'sec-ch-ua-platform: "macOS"'
+ 1237  npm run test
+ 1238  npx playwrite show-report
+ 1239  npx playwright show-report
+ 1240  npm run test
+ 1241  clear
+ 1242  npm run test:report
+ 1243  npx playwright test tests --update-snapshots
+ 1244  code .
+ 1245  npm install dotenv --save-dev
+ 1246  history
+ 1247  npx playwright test --ui
+ 1248  npx playwright install --with-deps
+ 1249  npx playwright --version
+ 1250  nvm --version
+ 1251  nvm --current
+ 1252  nvm use
+ 1253  nvm which
+ 1254  nvm use node
+ 1255  startnodedebugmode
+ 1256  npx playwright codegen localhost:3000/
+ 1257  npx playwright test --last-failed
+ 1258  npm install
+ 1259  npm init playwright@latest
+ 1260  alias
+ 1261  ll
+ 1262  tail Podfile
+ 1263  pod update
+ 1264  code .
+ 1265  pwd
+ 1266  startnodedebugmode
+ 1267  startnodedebugmode
+ 1268  alias
+ 1269  startnodedebugmode
+ 1270  history
+ 1271  npx playwright test tests --update-snapshots
+ 1272  history
+ 1273  pm run test:chromium
+ 1274  npm run test:chromium
+ 1275  npx playwright test tests --update-snapshots
+ 1276  npm run test:chromium
+ 1277  npm run test:firefox
+ 1278  npm run test:firefox --headed
+ 1279  npm run test:firefox
+ 1280  history
+ 1281  npx playwright test --ui
+ 1282  history
+ 1283  npx playwright test tests/homepage/home.spec.ts --debug --project chro*
+ 1284  npx playwright test tests/homepage/home.spec.ts --debug --project chromium
+ 1285  npx playwright test tests/homepage/home.spec.ts --project chromium
+ 1286  npm init playwright@latest --yes "--" . '--quiet' '--browser=chromium' '--browser=firefox' '--browser=webkit' '--gha'
+ 1287  npx playwright test --help
+ 1288  npx playwright test tests/homepage/home.spec.ts --project chromium  --fail-on-flaky-tests
+ 1289  code .
+ 1290  npm init playwrite@latest
+ 1291  npm init playwright@latest
+ 1292  npx playwright test
+ 1293  cd ../
+ 1294  ll
+ 1295  cd learning-playwright-5911873
+ 1296  ll
+ 1297  code .
+ 1298  npx playwright test tests/homepage/home.spec.ts:21
+ 1299  npx playwright test tests/homepage/home.spec.ts:21 --project chromium
+ 1300  npx playwright test tests/homepage/home.spec.ts:21 --project chromium --workers 2
+ 1301  npx playwright test tests/homepage/home.spec.ts:21 --project chromium --workers 1
+ 1302  npx playwright test tests/homepage/home.spec.ts:21 --project chromium --workers 0
+ 1303  npx playwright test
+ 1304  cd ..
+ 1305  ll
+ 1306  mkdir design-patters-repo
+ 1307  cd design-patters-repo
+ 1308  git clone git@github.com:LinkedInLearning/playwright-design-patterns-2019019.git
+ 1309  ll
+ 1310  cd playwright-design-patterns-2019019
+ 1311  git checkout 02_04
+ 1312  code .
+ 1313  npm install
+ 1314  npx playwright test
+ 1315  npx playwright install
+ 1316  npx playwright test
+ 1317  npx playwright install
+ 1318  npm init playwright@latest
+ 1319  npm install
+ 1320  git checkout 02_05
+ 1321  git status
+ 1322  git checkout .
+ 1323  git checkout 02_05
+ 1324  npx playwright test
+ 1325  npx playwright test --worker=1
+ 1326  npx playwright test --workers=1
+ 1327  clear
+ 1328  npx playwright test --ui
+ 1329  npx playwright test
+ 1330  npx playwright test tests/test.spec.ts
+ 1331  npm install --save-dev @cucumber/cucumber ts-node
+ 1332  npm t
+ 1333  npm test
+ 1334  npm b
+ 1335  npm c
+ 1336  npm t
+ 1337  npx playwright show-report
+ 1338  code .
+ 1339  ll
+ 1340  cd stickerfy
+ 1341  ll
+ 1342  code .
+ 1343  pwd
+ 1344  ll
+ 1345  npm install
+ 1346  open .
+ 1347  startnodedebugmode
+ 1348  ll
+ 1349  alias startnodedebugmode
+ 1350  startnodedebugmode
+ 1351  brew services start mongodb-community@5.0
+ 1352  brew services start mongodb-community@8.0
+ 1353  brew tap mongodb/brew\n
+ 1354  brew update
+ 1355  brew install mongodb-community@8.0
+ 1356  brew services start mongodb-community@8.0
+ 1357  node seed/product-seeder.js
+ 1358  npm run dev
+ 1359  npm run unit-test
+ 1360  npm run integration-test
+ 1361  mocha --recursive --exit test/integration/order.spec.js
+ 1362  npm run mocha --recursive --exit test/integration/order.spec.js
+ 1363  npm run integration-test
+ 1364  npm run ui-test
+ 1365  npm install
+ 1366  npm run dev
+ 1367  npm install
+ 1368  npm audit fix --forc
+ 1369  npm audit fix --force
+ 1370  npm run ui-test
+ 1371  npm run dev
+ 1372  npm run ui-test
+ 1373  npm run integration-test
+ 1374  npm install
+ 1375  npm i mongodb --save-dev
+ 1376  npm run dev
+ 1377  npm run integration-test
+ 1378  npm install connect-mongo@latest --save-dev
+ 1379  npm run integration-test
+ 1380  npm run dev
+ 1381  env
+ 1382  export MONGODB_URI=mongodb://localhost:27017/shopping
+ 1383  npm run integration-test
+ 1384  ./node_modules/mocha/bin/mocha ./test/unit/cart.spec.js
+ 1385  pwd
+ 1386  ll
+ 1387  ./node_modules/mocha/bin/mocha.js ./test/unit/cart.spec.js
+ 1388  npm test
+ 1389  npm install --save-dev nyc
+ 1390  node --version
+ 1391  npm run test-coverage
+ 1392  omz update
+ 1393  code .
+ 1394  python
+ 1395  which python3
+ 1396  python3
+ 1397  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Programming_Foundations_Fundamentals/Ex_Files_Programming_Foundations_Fundamentals/Exercise Files/Chap02/02_01.py"
+ 1398  python3
+ 1399  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Programming_Foundations_Fundamentals/Ex_Files_Programming_Foundations_Fundamentals/Exercise Files/Chap02/02_01.py"
+ 1400  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Programming_Foundations_Fundamentals/Ex_Files_Programming_Foundations_Fundamentals/Exercise Files/Chap05/test_func.py"
+ 1401  code .
+ 1402  sudo python3 get-pip.py
+ 1403  which pip
+ 1404  pip
+ 1405  ll
+ 1406  cd ..
+ 1407  ll
+ 1408  sudo python3 get-pip.py
+ 1409  which pip3
+ 1410  pip3 install requests
+ 1411  pip3 install pyinputplus 
+ 1412  pip3 install requests
+ 1413  pip3 install beautifulsoup4
+ 1414  pip3 install selenium
+ 1415  pip3 install webdriver-manager
+ 1416  /usr/bin/python3
+ 1417  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/doit.py"
+ 1418  pwd
+ 1419  ll
+ 1420  pwd
+ 1421  cd Exercise\ Files
+ 1422  python3 doit.py
+ 1423  python3 write_files_starter_code.py
+ 1424  python3 practice.py
+ 1425  print(pickDirectory('.pdf'))
+ 1426  python3 organize_me/organize_starter_code.py
+ 1427  print(organizeDirectory())
+ 1428  python3 organize_me/organize_starter_code.py
+ 1429  python3 
+ 1430  ll
+ 1431  cd ..
+ 1432  ll
+ 1433  cd Ex_Files_Using_Python_for_Automation
+ 1434  ll
+ 1435  cd Exercise\ Files
+ 1436  ll
+ 1437  pwd
+ 1438  python3 ./organize_me/organize_starter_code.py
+ 1439  ls
+ 1440  ll
+ 1441  cd organize
+ 1442  cd organize_me
+ 1443  ll
+ 1444  l
+ 1445  ll
+ 1446  code .
+ 1447  python3 organize_me/organize_starter_code.py
+ 1448  code .
+ 1449  python3 organize_starter_code.py
+ 1450  cd ..
+ 1451  ll
+ 1452  code .
+ 1453  python3 parse_data_part2.py
+ 1454  python3 parse_data_part3.py
+ 1455  python3 parse_data_part4.py
+ 1456  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/extract_data_with_regex_starter_code.py"
+ 1457  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/validate_inputs_starter_code.py"
+ 1458  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/automate_error_handling_part1.py"
+ 1459  0
+ 1460  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/automate_error_handling_part1.py"
+ 1461  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/automate_error_handling_part2.py"
+ 1462  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/request_and_parse_starter_code.py"
+ 1463  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/extract_data_from_html.py"
+ 1464  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/scrape_multiple_pages.py"
+ 1465  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/automate_basic_browser_starter_code.py"
+ 1466  cd ~/development
+ 1467  ll
+ 1468  cd repos
+ 1469  ll
+ 1470  mkdir udemy
+ 1471  cd udemy
+ 1472  xcode-select --install
+ 1473  brew install --cask cakebrew
+ 1474  ll
+ 1475  pwd
+ 1476  l
+ 1477  ls
+ 1478  pwd
+ 1479  cd ../
+ 1480  ll
+ 1481  cd Exercise\ Files
+ 1482  ll
+ 1483  git
+ 1484  git --version
+ 1485  brew upgrade git
+ 1486  git --version
+ 1487  cd ~
+ 1488  ls -a
+ 1489  .oh-my-zsh
+ 1490  ll
+ 1491  ..
+ 1492  .oh-my-zsh
+ 1493  ls -a
+ 1494  ll
+ 1495  alias ll
+ 1496  vi ~/.zshrc
+ 1497  vi ~/.zprofile
+ 1498  open ~
+ 1499  alias
+ 1500  open ~
+ 1501  cd ~
+ 1502  code .
+ 1503  la
+ 1504  clear
+ 1505  pwd
+ 1506  .oh-my-zsh
+ 1507  .pl\tplugins
+ 1508  .plugins
+ 1509  pwd
+ 1510  ll
+ 1511  . plugins
+ 1512  ll
+ 1513  ./plugins
+ 1514  cd ,,
+ 1515  cd ..
+ 1516  ./plugins
+ 1517  ll
+ 1518  la
+ 1519  ls -a
+ 1520  cd ..
+ 1521  pwd
+ 1522  cd ..
+ 1523  code .zshrc
+ 1524  ll
+ 1525  ls -a
+ 1526  zsh
+ 1527  ls -a
+ 1528  pwd
+ 1529  cd .oh-my-zsh
+ 1530  hi
+ 1531  code ~/.zshrc
+ 1532  cd ~
+ 1533  ll
+ 1534  pwd
+ 1535  mkdir example-repo
+ 1536  cd example-repo
+ 1537  git init
+ 1538  git config --list
+ 1539  git config --global init.defaultBranch master
+ 1540  git config --list
+ 1541  git config --edit --global init.defaultBranch master
+ 1542  git config --edit --global
+ 1543  ll
+ 1544  ls -a
+ 1545  pwd
+ 1546  git config --list
+ 1547  git config --list --show-origin --show-scope
+ 1548  pwd
+ 1549  cd ..
+ 1550  ll
+ 1551  rm -R ./example-repo
+ 1552  mkdir example-repo
+ 1553  git init
+ 1554  git checkout -b newb
+ 1555  ls ~/.oh-my-zsh/plugins
+ 1556  ls ~/.oh-my-zsh/plugins | grep web
+ 1557  zsh
+ 1558  ~/.oh-my-zsh/plugins/web-search
+ 1559  ls
+ 1560  more README.md
+ 1561  code ./README.md
+ 1562  google "zsh web-search plugin"
+ 1563  github "pytorch framework"
+ 1564  github "pytorch deeplearning framework"
+ 1565  stackoverflow "how do I disable zsh pluggins"
+ 1566  stackoverflow "how do I disable zsh plugins"
+ 1567  zsh
+ 1568  google "how does the python zsh plugin work"
+ 1569  zsh
+ 1570  py
+ 1571  google "zsh autosuggestions github"
+ 1572  brew install zsh-autosuggestions
+ 1573  zsh
+ 1574  brew uninstall zsh-autosuggestions
+ 1575  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ 1576  zsh
+ 1577  ls ~/.oh-my-zsh/plugins | grep web
+ 1578  google "zsh syntaxhighligting github"
+ 1579  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+ 1580  zsh
+ 1581  echo "hi"
+ 1582  pwd
+ 1583  ll
+ 1584  cd Ex_Files_Programming_Foundations_Fundamentals
+ 1585  ll
+ 1586  zsh
+ 1587  pwd
+ 1588  ll
+ 1589  la
+ 1590  ./Exercise\ Files
+ 1591  ll
+ 1592  code .
+ 1593  ../../../
+ 1594  ll
+ 1595  ./test\ automation\ foundations
+ 1596  cd Ex_Files__Test_Automation_Foundations_2022
+ 1597  code .
+ 1598  ../
+ 1599  open .
+ 1600  ./Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise\ Files
+ 1601  code .
+ 1602  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Programming_Foundations_Fundamentals/Ex_Files_Programming_Foundations_Fundamentals/Exercise Files/Chap05/05_07.py"
+ 1603  ll
+ 1604  code .
+ 1605  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/extract_data_with_regex_starter_code.py"
+ 1606  /usr/bin/python3 "/Users/bsahlas/development/repos/linkedin-learning/Using_Python_for_Automation/Ex_Files_Using_Python_for_Automation/Exercise Files/automate_basic_browser_starter_code.py"
+ 1607  google "pyenv"
+ 1608  zsh
+ 1609  pyenv
+ 1610  brew update\nbrew install pyenv
+ 1611  zsh
+ 1612  code ~/.zprofile
+ 1613  zsh
+ 1614  penv
+ 1615  pyenv
+ 1616  zsh
+ 1617  pyenv
+ 1618  pyenv which
+ 1619  pyenv --which
+ 1620  pyenv which
+ 1621  pyenv commands
+ 1622  zsh
+ 1623  p
+ 1624  pyenv commands
+ 1625  pyenv
+ 1626  pyenv versions
+ 1627  pyenv install --help
+ 1628  pyenv install --list
+ 1629  pyenv install --list | wc -l
+ 1630  pyenv install 3.11
+ 1631  brew install openssl readline sqlite3 xz zlib tcl-tk@8 libb2
+ 1632  pyenv install 3.11
+ 1633  pyenv uninstall 3.11
+ 1634  pyenv uninstall 3.11.12
+ 1635  pyenv install 3.11
+ 1636  zsh
+ 1637  pyenv uninstall 3.11.12
+ 1638  pyenv install 3.11
+ 1639  pyenv version
+ 1640  pyenv versions
+ 1641  pyenv shell 3.11.12 
+ 1642  pyenv versions
+ 1643  python --version
+ 1644  pyenv global 3.11.12
+ 1645  python --version
+ 1646  history
+ 1647  history |more
+ 1648  pyenv install --help     
+ 1649  pyenv install -l
+ 1650  history
+ 1651  pyenv install -l
+ 1652  pyenv install 3.14
+ 1653  pyenv install 3.13
+ 1654  pyenv --version
+ 1655  python --version
+ 1656  pyenv -l
+ 1657  pyenv versions
+ 1658  pyenv global 3.13.3
+ 1659  zsh
+ 1660  python --version
+ 1661  pyenv install 3.12
+ 1662  pyenv global 3.11.12
+ 1663  pwd
+ 1664  ~/development/repos
+ 1665  pwd
+ 1666  git status
+ 1667  open .
+ 1668  PWD
+ 1669  zsh
+ 1670  git s
+ 1671  git status
+ 1672  pwd
+ 1673  ~/development/repos
+ 1674  git status
+ 1675  ..
+ 1676  ./bsahlas
+ 1677  ll
+ 1678  la
+ 1679  pwd
+ 1680  ll
+ 1681  ./development/repos
+ 1682  mkdir example-repo
+ 1683  code example-repo
+ 1684  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1685  /Users/bsahlas/.pyenv/versions/3.11.12/bin/python
+ 1686  add_numbers(a=1, b=2)
+ 1687  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1688  /Users/bsahlas/.pyenv/versions/3.11.12/bin/python /Users/bsahlas/development/repos/example-repo/example.py
+ 1689  python --version
+ 1690  pyenv global 3.13.3
+ 1691  python --version
+ 1692  zsh
+ 1693  python --version
+ 1694  pyenv global 3.13.3
+ 1695  python --version
+ 1696  zsh
+ 1697  ./example-repo
+ 1698  ./
+ 1699  code .
+ 1700  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1701  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python
+ 1702  pip install numpy
+ 1703  which python 
+ 1704  echo $PYENV_VERSION
+ 1705  zsh
+ 1706  echo $PYENV_VERSION
+ 1707  pyenv --version
+ 1708  ~
+ 1709  pwd
+ 1710  code .
+ 1711  python --version
+ 1712  which python 
+ 1713  code .
+ 1714  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1715  which python 
+ 1716  pip list
+ 1717  pip install numpy==1.23.5
+ 1718  pip list
+ 1719  clear
+ 1720  which python 
+ 1721  ./Users/bsahlas/.pyenv
+ 1722  /Users/bsahlas/.pyenv
+ 1723  ll
+ 1724  ls 
+ 1725  ./versions
+ 1726  ll
+ 1727  ls
+ 1728  ./3.11.12
+ 1729  l
+ 1730  lib
+ 1731  ll
+ 1732  ls
+ 1733  open .
+ 1734  ls
+ 1735  ./python3.11
+ 1736  ls
+ 1737  ./site-packages
+ 1738  ls
+ 1739  ls -l
+ 1740  ls -1
+ 1741  pip install numpy
+ 1742  pyenv --version
+ 1743  pyenv install -l
+ 1744  history
+ 1745  pyenv shell 3.11.12
+ 1746  python --version
+ 1747  pip install numpy
+ 1748  ls -1
+ 1749  pip install --upgrade numpy
+ 1750  zsh
+ 1751  pip install --upgrade numpy
+ 1752  which python 
+ 1753  ls -1
+ 1754  python --version
+ 1755  zsh
+ 1756  python -m
+ 1757  python --module venv
+ 1758  python -m venv
+ 1759  python -m venv --help
+ 1760  clear
+ 1761  python -m venv ./venv/
+ 1762  ll
+ 1763  rm -R venv
+ 1764  pwd
+ 1765  python -m venv ./venv/
+ 1766  echo $PATH
+ 1767  source venv/bin/activate
+ 1768  echo $PATH
+ 1769  python --version
+ 1770  which python 
+ 1771  which clear
+ 1772  $(which clear)
+ 1773  which pip 
+ 1774  python -m pip
+ 1775  python -m pip install numpy
+ 1776  deactivate
+ 1777  python --version
+ 1778  pip list
+ 1779  pip uninstall numpy
+ 1780  pip list
+ 1781  which python | pbcopy
+ 1782  which python
+ 1783  pip list
+ 1784  which python
+ 1785  source venv/bin/activate
+ 1786  which python
+ 1787  pip list
+ 1788  which python
+ 1789  code .
+ 1790  pwd
+ 1791  ./development/repos/pqa-root/pqa-utils
+ 1792  git status
+ 1793  ll
+ 1794  ./tests-examples
+ 1795  ll
+ 1796  open .
+ 1797  pwd
+ 1798  cd ../../
+ 1799  ..//
+ 1800  ll
+ 1801  mkdir tpp
+ 1802  cd tpp
+ 1803  mkdir section-06
+ 1804  cd section-06
+ 1805  git clone git@github.com:sahlas/pqa-utils.git
+ 1806  ll
+ 1807  ./pqa-utils
+ 1808  code .
+ 1809  git config
+ 1810  git config --global
+ 1811  git config --get-all
+ 1812  git config list
+ 1813  git config list --global
+ 1814  git config list
+ 1815  cd ..
+ 1816  git config list
+ 1817  ./pqa-utils
+ 1818  which git
+ 1819  git help --config
+ 1820  git get --all
+ 1821  git config list --global
+ 1822  git config --global
+ 1823  git config --global --get-all
+ 1824  git config get core.filemode
+ 1825  google "error: key does not contain a section: get"
+ 1826  git config --global --edit
+ 1827  git config get core.filemode
+ 1828  git config --global --edit
+ 1829  zsh
+ 1830  git config --global --edit
+ 1831  git config get core.filemode
+ 1832  git config --global --edit
+ 1833  git config --list --show-origin
+ 1834  git config --list
+ 1835  git get --all
+ 1836  git config --global --get-all
+ 1837  git config --get-all
+ 1838  git config --list
+ 1839  git config --get-all
+ 1840  brew install git
+ 1841  git config --get-all
+ 1842  git config --global --edit
+ 1843  git config --global
+ 1844  git --version
+ 1845  git config .
+ 1846  git config list
+ 1847  /Users/bsahlas
+ 1848  ll
+ 1849  ./development/repos/
+ 1850  ll
+ 1851  ./udemy
+ 1852  ll
+ 1853  ls
+ 1854  mkdir repos
+ 1855  ./repos
+ 1856  mkdir example
+ 1857  cd example
+ 1858  ls -a
+ 1859  git init
+ 1860  ls -a
+ 1861  clear
+ 1862  pwd
+ 1863  code .
+ 1864  ll
+ 1865  ls -a
+ 1866  la
+ 1867  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1868  git add README.md
+ 1869  git status
+ 1870  git diff git_tutorial.py
+ 1871  git status
+ 1872  git diff README.md
+ 1873  git diff --cached
+ 1874  git diff --cached README.md
+ 1875  git diff --cached
+ 1876  git status
+ 1877  git diff --cached README.md
+ 1878  git diff --cached 
+ 1879  git commit -m "Adding a README"
+ 1880  git log
+ 1881  git branch
+ 1882  git checkout d058440bbb97e2e5c807234fe7924d72f61042b8
+ 1883  git log
+ 1884  git checkout head
+ 1885  git log
+ 1886  git checkout head
+ 1887  git lo
+ 1888  git log
+ 1889  git status
+ 1890  git commit -m "moving files to new folder"
+ 1891  git pus
+ 1892  git push origin -u master
+ 1893  git log
+ 1894  git checkout b16a42042d5a67d08
+ 1895  git checkout master
+ 1896  git status
+ 1897  git checkout b16a42042d5a67d08
+ 1898  git stash 
+ 1899  git stash pop
+ 1900  git status
+ 1901  git stash
+ 1902  git stash pop
+ 1903  git stash
+ 1904  git status
+ 1905  git checkout folder/README.md
+ 1906  git status
+ 1907  git stash
+ 1908  git checkout -b feat/funcs
+ 1909  git add .
+ 1910  git stash
+ 1911  git checkout -b bug_1234
+ 1912  git stash pop
+ 1913  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete feat/funcs
+ 1914  git status
+ 1915  git branch
+ 1916  git checkout master 
+ 1917  git status
+ 1918  git checkout -b fix/security
+ 1919  git checkout master 
+ 1920  git checkout bug_1234 
+ 1921  git commit -m "added docs to func"
+ 1922  git checkout fix/performance 
+ 1923  git status
+ 1924  git diff
+ 1925  git checkout example.py
+ 1926  git status
+ 1927  git checkout fix/performance 
+ 1928  git checkout master 
+ 1929  git checkout bug_1234 
+ 1930  git checkout fix/security 
+ 1931  git status
+ 1932  ll
+ 1933  open .
+ 1934  git checkout bug_1234 
+ 1935  git checkout fix/security 
+ 1936  git status
+ 1937  git config --local
+ 1938  git config --local --help
+ 1939  git status
+ 1940  git add example.py
+ 1941  git add venv_demo.py
+ 1942  git checkout fix/performance 
+ 1943  git status
+ 1944  git commit -m "added performance stuff"
+ 1945  open .
+ 1946  git checkout master 
+ 1947  git status
+ 1948  git diff
+ 1949  git add folder
+ 1950  git status
+ 1951  ll
+ 1952  ls
+ 1953  cd ..
+ 1954  ll
+ 1955  ./example
+ 1956  l
+ 1957  git checkout bug_1234 
+ 1958  git checkout master 
+ 1959  open .
+ 1960  git status
+ 1961  git add example.py
+ 1962  git add venv_demo.py
+ 1963  git commit -m "start from here"
+ 1964  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete bug_1234
+ 1965  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete --force bug_1234
+ 1966  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete fix/performance
+ 1967  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete --force fix/performance
+ 1968  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete --force fix/security
+ 1969  git branch
+ 1970  git branch fix/security
+ 1971  git branch fix/performance
+ 1972  git branch feature/docs
+ 1973  git checkout feature/docs 
+ 1974  git commit -m "added docs stuff"
+ 1975  git status
+ 1976  git checkout fix/performance 
+ 1977  git add folder/git_tutorial.py
+ 1978  git commit -m "trying the sum() function in add_numbers method"
+ 1979  /opt/homebrew/bin/git -C "/Users/bsahlas/development/repos/udemy/repos/example" -c "core.editor=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --wait --reuse-window" branch --delete fix/testing
+ 1980  code .
+ 1981  git config --system init.defaultbranch master
+ 1982  git ini
+ 1983  git init
+ 1984  git add ./folder
+ 1985  git commit -m "Create folder and some files."
+ 1986  git add .
+ 1987  git commit -m "Git Ignore file"
+ 1988  git checkout feature/docs 
+ 1989  git checkout -b feature/docs 
+ 1990  git checkout -b fix/security
+ 1991  git checkout -b fix/performance
+ 1992  git checkout feature/docs 
+ 1993  git add folder/README.md
+ 1994  git commit -m "doc improvements"
+ 1995  git checkout master 
+ 1996  git merge feature/docs 
+ 1997  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 1998  git log
+ 1999  git checkout feature/docs 
+ 2000  git diff
+ 2001  git add folder/git_tutorial.py
+ 2002  git commit -m "inline func help doc"
+ 2003  git checkout ma
+ 2004  git checkout master 
+ 2005  git merge feature/docs 
+ 2006  git log
+ 2007  clear
+ 2008  git merge fix/performance 
+ 2009  git checkout fix/performance 
+ 2010  git status
+ 2011  git add folder/git_tutorial.py
+ 2012  git commit -m "a different doc change"
+ 2013  git merge master 
+ 2014  git status
+ 2015  git checkout master 
+ 2016  git checkout fix/performance 
+ 2017  git checkout fix/security 
+ 2018  git checkout master 
+ 2019  git merge fix/performance 
+ 2020  git branch -d fix/performance 
+ 2021  git branch -d feature/docs 
+ 2022  git branch 
+ 2023  git merge fix/performance 
+ 2024  git merge fix/security 
+ 2025  git lo
+ 2026  git log
+ 2027  git checkout -b bugFix
+ 2028  git status
+ 2029  git commit -m "commit once from bugFix branc"
+ 2030  git checkout master 
+ 2031  git commit -m "commit once from master branch"
+ 2032  git checkout bugFix 
+ 2033  git rebase
+ 2034  git rebase master 
+ 2035  git add folder/bugfix.txt
+ 2036  git commit -m "adding a bugFix"
+ 2037  git rebase master 
+ 2038  git checkout master 
+ 2039  git rebase master 
+ 2040  git rebase bugFix 
+ 2041  git log
+ 2042  git checkout bugFix 
+ 2043  git status
+ 2044  git rebase master 
+ 2045  git commit -m "adding a bugFix2"
+ 2046  git commit -a -m "adding a bugFix2"
+ 2047  git rebase master 
+ 2048  git checkout master 
+ 2049  git rebase master 
+ 2050  git merge bugFix 
+ 2051  git rebase master 
+ 2052  pwd
+ 2053  l,
+ 2054  ll
+ 2055  ls
+ 2056  open .
+ 2057  cd ../
+ 2058  git clone https://github.com/sahlas/taking-python-to-prod.git
+ 2059  code ./taking-python-to-prod
+ 2060  git branch
+ 2061  git checkout feature-adding-demo-file 
+ 2062  ../../
+ 2063  ll
+ 2064  ls
+ 2065  pwd
+ 2066  cd repos
+ 2067  ls
+ 2068  cd Example
+ 2069  git checkout master 
+ 2070  code .
+ 2071  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2072  git branch
+ 2073  git status
+ 2074  git remote ad origin https://github.com/sahlas/git-course-example.git
+ 2075  git remote add origin https://github.com/sahlas/git-course-example.git
+ 2076  git branch -M main
+ 2077  git push -u origin main
+ 2078  git remote add origin https://github.com/sahlas/git-example.git\ngit branch -M main\ngit push -u origin main
+ 2079  git status
+ 2080  ll
+ 2081  git remote add origin https://github.com/sahlas/git-example.git
+ 2082  git remote remove origin
+ 2083  git remote add origin https://github.com/sahlas/git-example.git
+ 2084  git branch -M main\ngit push -u origin main
+ 2085  git checkout feature-adding-demo-file 
+ 2086  git branch
+ 2087  git checkout bugFix 
+ 2088  git status
+ 2089  git branch -a 
+ 2090  git remote -v
+ 2091  git checkout main 
+ 2092  git commit -m "adding new text to README.md."
+ 2093  git push
+ 2094  git checkout bugFix 
+ 2095  git pull origin main
+ 2096  clear
+ 2097  git add folder/README.md
+ 2098  git commit -m "adding docs line to README.md."
+ 2099  git push
+ 2100  git push --set-upstream origin bugFix
+ 2101  git push
+ 2102  git push --set-upstream origin min
+ 2103  git push --set-upstream origin main
+ 2104  git checkout main 
+ 2105  git merge bugFix 
+ 2106  git commit
+ 2107  git commit -m "adding docs line to README.md."
+ 2108  git reset
+ 2109  git status
+ 2110  git push
+ 2111  git checkout -b new_branch
+ 2112  git status
+ 2113  git add ./f2
+ 2114  git commit -m "adding new folder and a file"
+ 2115  git commit -m "adding a second file"
+ 2116  git push --set-upstream origin new_branch 
+ 2117  git branch
+ 2118  git branch -a
+ 2119  git fetch --all
+ 2120  git branch -a
+ 2121  git checkout my_new_remote_branch 
+ 2122  git log
+ 2123  git status
+ 2124  git checkout main 
+ 2125  git status
+ 2126  git checkout -b rename_root_dir
+ 2127  cd ../
+ 2128  ll
+ 2129  mv ./Example ./example
+ 2130  git status
+ 2131  cd example
+ 2132  git status
+ 2133  ll
+ 2134  cd ..
+ 2135  ll
+ 2136  cd example
+ 2137  ll
+ 2138  git checkout main 
+ 2139  git checkout -d rename_root_dir 
+ 2140  git checkout main
+ 2141  git status
+ 2142  git pull
+ 2143  git stash list
+ 2144  git stash pop
+ 2145  git merge my_new_remote_branch 
+ 2146  git status
+ 2147  git push
+ 2148  git commit -m "new readme content"
+ 2149  git checkout -b feature/git-workflow-summary
+ 2150  git stash pop
+ 2151  git status
+ 2152  git commit -m "new git workflow content"
+ 2153  git push --set-upstream origin feature/git-workflow-summary 
+ 2154  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2155  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/Example/folder/git_tutorial.py
+ 2156  python 
+ 2157  clear
+ 2158  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python
+ 2159  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/Example/folder/git_tutorial.py
+ 2160  pylint
+ 2161  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/Example/rgp.py
+ 2162  python import this
+ 2163  python
+ 2164  clear
+ 2165  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/Example/generators.py
+ 2166  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2167  [wd
+ 2168  ll
+ 2169  ls
+ 2170  ls -a
+ 2171  ls -afasd
+ 2172  ls -asdf
+ 2173  ls -a
+ 2174  ..
+ 2175  mkdir rpg
+ 2176  cd rpg
+ 2177  cp ../example/*.py .
+ 2178  ll
+ 2179  code .
+ 2180  python -m venv ./venv/
+ 2181  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2182  source venv/bin/activate
+ 2183  pip install black
+ 2184  black --help
+ 2185  ll
+ 2186  cp ./unformatted.py ./unformatted.py.bck
+ 2187  black unformatted.py
+ 2188  pip uninstall black 
+ 2189  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2190  ./venv/bin/python -m pip -U black
+ 2191  ./venv/bin/python -m pip install -U black
+ 2192  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2193  code .
+ 2194  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2195  code .
+ 2196  python -m venv ./venv/
+ 2197  which python
+ 2198  source ./venv/bin/activate
+ 2199  which python
+ 2200  ./venv/bin/python -m pip install black
+ 2201  which black
+ 2202  pwd
+ 2203  cd ../
+ 2204  cd example
+ 2205  code .
+ 2206  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2207  python -m venv ./venv/
+ 2208  history
+ 2209  ./venv/bin/python -m pip install black
+ 2210  history
+ 2211  source ./venv/bin/activate
+ 2212  ll
+ 2213  rm -R venv
+ 2214  ll
+ 2215  code .
+ 2216  history
+ 2217  python -m venv ./venv/
+ 2218  sourc v/b/a
+ 2219  sourc venv/bin/activate
+ 2220  source v/b/a
+ 2221  source venv/bin/activate
+ 2222  code .
+ 2223  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2224  source venv/bin/activate
+ 2225  pip install black
+ 2226  code .
+ 2227  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2228  pip uninstall black 
+ 2229  which python
+ 2230  python pip install black
+ 2231  which python
+ 2232  ./venv/bin/python -m pip install black
+ 2233  code .
+ 2234  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2235  ./venv/bin/python -m pip uninstall black
+ 2236  python -m pip install -U black
+ 2237  ./venv/bin/python -m pip install black
+ 2238  ./venv/bin/python -m pip uninstall black
+ 2239  ./venv/bin/python -m pip install black
+ 2240  code .
+ 2241  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2242  code .
+ 2243  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2244  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted-2.py --quiet
+ 2245  black-py.run
+ 2246  python black-py.run
+ 2247  pip install autopep8
+ 2248  code .
+ 2249  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2250  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted-2.py --quiet
+ 2251  history
+ 2252  ./venv/bin/python -m pip install autopep8
+ 2253  code .
+ 2254  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2255  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted-2.py --quiet
+ 2256  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted.py --quiet
+ 2257  code .
+ 2258  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2259  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted.py --quiet
+ 2260  python -m black /Users/bsahlas/development/repos/udemy/repos/example/unformatted.py 
+ 2261  code .
+ 2262  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2263  ./venv/bin/python -m pip uninstall black
+ 2264  code .
+ 2265  which python
+ 2266  source venv/bin/activate
+ 2267  ./venv/bin/python -m pip install --upgrade autopep8
+ 2268  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2269  ./venv/bin/python -m pip install --upgrade autopep8
+ 2270  which autopep8
+ 2271  autopep8 --in-place 
+ 2272  autopep8 --in-place .
+ 2273  autopep8 --in-place ./unformatted-2.py
+ 2274  autopep8 --agressive  ./unformatted-2.py
+ 2275  autopep8 --aggressive  ./unformatted-2.py
+ 2276  autopep8 --aggressive  ./unformatted-2.py --in-place
+ 2277  source venv/bin/activate
+ 2278  pip install autopep8
+ 2279  autopep8 --aggressive  ./unformatted-2.py --in-place
+ 2280  pip install pylint
+ 2281  pylint ./folder/linting.py
+ 2282  code .
+ 2283  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2284  code .
+ 2285  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2286  pylint --disable=C0115 ./folder/linting.py
+ 2287  pylint --disable=C0115 ./folder/linting.py |grep C0115
+ 2288  pylint --disable=C0115 ./folder/linting.py |grep C0116
+ 2289  pylint ./folder/linting.py
+ 2290  pylint ./folder/linting.py |grep C0116
+ 2291  pylint ./folder/linting.py |grep C011
+ 2292  pylint ./folder/linting.py |grep C0115
+ 2293  pylint --generate-rcfile > .pylintrc
+ 2294  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2295  clear
+ 2296  python pip install flake8
+ 2297  python -m pip install flake8
+ 2298  python -m pip uninstall flake8
+ 2299  pip install flake8
+ 2300  clear
+ 2301  flake8 ./folder/linting.py
+ 2302  flake8 ./linting.py
+ 2303  flake8 --excludeF821
+ 2304  flake8 --exclude=F821
+ 2305  flake8 --exclude=F821 linting.py
+ 2306  flake8 --exclude=F linting.py
+ 2307  flake8 --exclude=E402
+ 2308  flake8 --exclude=E402 linting.py
+ 2309  flake8 --help
+ 2310  flake8 --ignore=E402 linting.py
+ 2311  flake8 --ignore=F821 linting.py
+ 2312  flake8 --help
+ 2313  flake8 --help | grep exclude
+ 2314  flake8 --exclude="E402" linting.py
+ 2315  flake8 --exclude="F821" linting.py
+ 2316  flake8 --select=F821
+ 2317  flake8 --select=F821 linting.py
+ 2318  code .
+ 2319  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2320  pip install darglint
+ 2321  code .
+ 2322  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2323  clear
+ 2324  darglint linting.py -s=google
+ 2325  clear
+ 2326  pip install isort
+ 2327  isort imports.py
+ 2328  isort --help
+ 2329  isort --help |grep -m
+ 2330  isort --multi-line VERTICAL_HANGING_INDENT
+ 2331  isort --multi-line VERTICAL_HANGING_INDENT imports.py --fgw
+ 2332  isort --settings .isort.cfg
+ 2333  code .
+ 2334  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2335  isort --settings .isort.cfg
+ 2336  isort --settings .isort.cffas
+ 2337  isort --settings .isort.cfg
+ 2338  isort --settings .isort.cfg .
+ 2339  isort --settings .isort.cfg imports.py
+ 2340  isort --settings  imports.py
+ 2341  isort --settings .isort.cfg imports.py
+ 2342  code .
+ 2343  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2344  isort --settings .isort.cfg imports.py
+ 2345  clear
+ 2346  python ./cyclomatic_complexity.py
+ 2347  pip install radon
+ 2348  radon --help
+ 2349  radon cc ./cyclomatic_complexity.py
+ 2350  radon cc ./cyclomatic_complexity.py -s
+ 2351  python ./cyclomatic_complexity.py
+ 2352  radon cc ./cyclomatic_complexity.py
+ 2353  radon cc ./cyclomatic_complexity.py -s
+ 2354  radon cc ./cyclomatic_complexity.py
+ 2355  radon cc ./cyclomatic_complexity.py -s
+ 2356  clear
+ 2357  python type_hints.py
+ 2358  clear
+ 2359  pip install mypy
+ 2360  mypy type_hints.py
+ 2361  python type_hints.py
+ 2362  mypy type_hints.py
+ 2363  code .
+ 2364  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2365  code .
+ 2366  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2367  /Users/bsahlas/development/repos/udemy/repos/example/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/example/type_hints3.py
+ 2368  /Users/bsahlas/development/repos/udemy/repos/example/venv/bin/python
+ 2369  print(add(a="a", b="B"))
+ 2370  /Users/bsahlas/development/repos/udemy/repos/example/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/example/type_hints3.py
+ 2371  /Users/bsahlas/development/repos/udemy/repos/example/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/example/duck.py
+ 2372  clear
+ 2373  flake8 . --exclude ./venv
+ 2374  clear
+ 2375  pylint ./folder/linting.py |grep C0115
+ 2376  pylint ./folder/linting.py
+ 2377  pylint ./folder/old-linting.py
+ 2378  clear
+ 2379  /Users/bsahlas/development/repos/udemy/repos/example/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/example/big0-constant.py
+ 2380  darker 
+ 2381  pip install darker
+ 2382  darker --help
+ 2383  darker -L "flake 8 --exclude ./venv/" .
+ 2384  darker -L "flake8 --exclude ./venv/" .
+ 2385  darker -L "flake8 --exclude ./venv/" ./stub_usage.py
+ 2386  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2387  pip install ruff
+ 2388  ruff check ./type_hints.py
+ 2389  ruff check ./
+ 2390  ruff check ./type_hints2.py
+ 2391  ruff check .
+ 2392  ruff check . --fix
+ 2393  ruff check .
+ 2394  ruff check ./type_hints2.py
+ 2395  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2396  ruff check ./type_hints3.py
+ 2397  ruff check ./type_hints.py
+ 2398  ruff check ./big0-constant.py
+ 2399  ruff check ./type_hints3.py
+ 2400  ruff --help | less
+ 2401  ruff check --config ./ruff.toml
+ 2402  ruff check --config ./ruff.toml ./type_hints3.py
+ 2403  ruff check --config ./ruff.toml ./type_hints3.py --fix
+ 2404  ruff check --config ./ruff.toml --fix ./type_hints3.py
+ 2405  ruff check --config ./ruff.toml ./type_hints3.py --fix
+ 2406  clear
+ 2407  ruff check --config ./ruff.toml type_hints3.py --fix
+ 2408  ruff --help 
+ 2409  ruff check --config ./ruff.toml type_hints3.py --fix
+ 2410  ruff check --fix  --config ./ruff.toml type_hints3.py --fix
+ 2411  ruff check --fix  --config ./ruff.toml type_hints3.py
+ 2412  ruff check --fix  --config ./ruff.toml type_hints3.py --select ERA001
+ 2413  ruff check --fix --select ERA001  --config ./ruff.toml type_hints3.py
+ 2414  ruff check --select ERA001 --fix ./type_hints3.py
+ 2415  code .
+ 2416  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2417  ruff check --select ERA001 --fix ./type_hints3.py
+ 2418  pwd
+ 2419  ruff check --select ERA001 --fix ./type_hints3.py
+ 2420  ruff check  --fix ./type_hints3.py
+ 2421  cd ..
+ 2422  ll
+ 2423  mkdir section-09
+ 2424  cd section-09
+ 2425  code .
+ 2426  git init
+ 2427  penv help
+ 2428  which penv
+ 2429  which venv
+ 2430  google venv
+ 2431  python pip install venv ./venv
+ 2432  which python
+ 2433  python pip --help
+ 2434  pip --help
+ 2435  pip install venv ./venv
+ 2436  ll
+ 2437  python --help -m
+ 2438  python --help |grep "-m"
+ 2439  python --help 
+ 2440  python -m venv ./venv/
+ 2441  python pip install ruff
+ 2442  source venv/bin/activate
+ 2443  python pip install ruff
+ 2444  which pip
+ 2445  pip install ruff
+ 2446  which pip
+ 2447  pip --version
+ 2448  code .
+ 2449  ll
+ 2450  chmod +x ./check-code-quality.sh
+ 2451  ll
+ 2452  ./check-code-quality.sh
+ 2453  ll
+ 2454  source venv/bin/activate
+ 2455  ll
+ 2456  ls
+ 2457  source venv/bin/activate
+ 2458  ./check-code-quality.sh
+ 2459  python pip install black
+ 2460  source venv/bin/activate
+ 2461  which pip
+ 2462  pip
+ 2463  python pip install black
+ 2464  pip install ruff
+ 2465  pip install black
+ 2466  ./check-code-quality.sh
+ 2467  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2468  ./check-code-quality.sh
+ 2469  pip install flake8
+ 2470  pip install pylint
+ 2471  ./check-code-quality.sh
+ 2472  mypy type_hints.py
+ 2473  pip insall mypy
+ 2474  pip intsall mypy
+ 2475  pip install mypy
+ 2476  mypy .
+ 2477  mypy . --exclude ./venv
+ 2478  ./check-code-quality.sh
+ 2479  pip install ruff
+ 2480  ruff --help 
+ 2481  ./check-code-quality.sh
+ 2482  ruff .
+ 2483  ./check-code-quality.sh
+ 2484  ruff --help
+ 2485  ./check-code-quality.sh
+ 2486  isort --settings .isort.cfg imports.py
+ 2487  ./check-code-quality.sh
+ 2488  isort --settings .isort.cfg imports.py
+ 2489  ruff --help
+ 2490  git rebase master 
+ 2491  history |grep git
+ 2492  pwd
+ 2493  git push --set-upstream origin feature/section-09
+ 2494  git push --set-upstream origin section-09
+ 2495  git checkout -b section-09
+ 2496  git push --set-upstream origin section-09
+ 2497  git checkout master 
+ 2498  git checkout main
+ 2499  git checkout origin master
+ 2500  git branch
+ 2501  ll
+ 2502  git status
+ 2503  git checkout origin master
+ 2504  git init -b main
+ 2505  git remote add origin https://github.com/sahlas/taking-python-to-prod.git
+ 2506  git fetch --all
+ 2507  git status
+ 2508  git checkout section-09 
+ 2509  git add .
+ 2510  git status
+ 2511  git pull origin main
+ 2512  ll
+ 2513  git status
+ 2514  ll
+ 2515  git init
+ 2516  git add README.md
+ 2517  git commit -m "first commit"
+ 2518  git branch -M main
+ 2519  git stauts
+ 2520  git status
+ 2521  git add  .
+ 2522  git reset --all
+ 2523  git reset
+ 2524  git status
+ 2525  git remote add origin https://github.com/sahlas/tpp-section-09.git
+ 2526  git push -u origin main
+ 2527  git pull origin main
+ 2528  ll
+ 2529  git status
+ 2530  git add .
+ 2531  git commit -m "catchup'\n"
+ 2532  git push origin main
+ 2533  git rebase main
+ 2534  git add check-code-quality.sh
+ 2535  git commit -m "adding check check-code-quality script to reduced linting friction for contributors"
+ 2536  git add check-code-quality.sh
+ 2537  git commit -m "adding check check-code-quality script to reduced linting friction for contributors"
+ 2538  git add check-code-quality.sh
+ 2539  git commit -m "adding check check-code-quality script to reduced linting friction for contributors"
+ 2540  git commit -m "adding check check-code-quality script to reduced linting friction for contributors" --no-verify
+ 2541  pin install pre-commit
+ 2542  pip install pre-commit
+ 2543  pre-commit --help
+ 2544  pre-commit sample-config 
+ 2545  pre-commit sample-config > .pre-commit-config.yaml
+ 2546  ll
+ 2547  pre-commit run --all-files
+ 2548  pre-commit install
+ 2549  git commit -m 
+ 2550  git commit -m "clean up extra whitespace"
+ 2551  git push origin main
+ 2552  git status
+ 2553  git commit -m "clean up extra whitespace"
+ 2554  git status
+ 2555  git push origin main
+ 2556  git status
+ 2557  git add trial.py
+ 2558  git status
+ 2559  git commit -m "clean up extra whitespace"
+ 2560  git status
+ 2561  git push origin main
+ 2562  git status
+ 2563  git diff
+ 2564  git add trial.py
+ 2565  git commit -m "trial is fixed"
+ 2566  git push origin main
+ 2567  git pull origin main 
+ 2568  git commit -m "trial is fixed" --no-verify
+ 2569  git push origin main
+ 2570  git commit -m "trial is fixed" --no-verify
+ 2571  git status
+ 2572  git diff trial.py
+ 2573  git commit -m "trial is fixed" --no-verify
+ 2574  git commit -m "trial is fixed"
+ 2575  pre-commit run --all-files
+ 2576  pre-commit autoupdate
+ 2577  git commit -m "trial is fixed"
+ 2578  git status
+ 2579  git diff
+ 2580  git add .black.toml
+ 2581  git add .flake8
+ 2582  git add .isort.cfg
+ 2583  git add .vscode/*
+ 2584  git diff check-code-quality.sh
+ 2585  git add check-code-quality.sh
+ 2586  git satus
+ 2587  git status
+ 2588  rm .DS_Store
+ 2589  git status
+ 2590  git add .
+ 2591  git status
+ 2592  pre-commit run --all-files
+ 2593  darker -L "flake8 --exclude ./venv/" ./stub_usage.py
+ 2594  pre-commit run --all-files
+ 2595  pre-commit autoupdate
+ 2596  pre-commit run --all-files
+ 2597  python --version
+ 2598  git pull origin main 
+ 2599  which python
+ 2600  pip install pylint
+ 2601  clear
+ 2602  code .
+ 2603  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2604  pylint --rcfile=.pylintrc $(git ls-files '*.py')
+ 2605  git ls-files '*.py'
+ 2606  git status
+ 2607  git add .
+ 2608  git commit -m "delete pys"
+ 2609  git status
+ 2610  git commit -m "delete pys" –no-verify
+ 2611  git commit -m "delete pys" –-no-verify
+ 2612  git commit -m "delete pys" --no-verify
+ 2613  git status
+ 2614  pylint --rcfile=.pylintrc $(git ls-files '*.py')
+ 2615  ll
+ 2616  pylint --rcfile=.pylintrc $(git ls-files '*.py')
+ 2617  git ls-files '*.py'
+ 2618  git status
+ 2619  git add type_hints.py
+ 2620  git ls-files '*.py'
+ 2621  pylint --rcfile=.pylintrc $(git ls-files '*.py')
+ 2622  git status
+ 2623  git add type_hints.py
+ 2624  git commit -m "adding a doc string"
+ 2625  git push origin main
+ 2626  git status
+ 2627  git add .
+ 2628  git commit -m "adding a doc string"
+ 2629  git status
+ 2630  git commit -m "adding a doc string"
+ 2631  git status
+ 2632  git add .
+ 2633  git commit -m "adding a doc string"
+ 2634  git status
+ 2635  git add .
+ 2636  git commit -m "adding a doc string"
+ 2637  git status
+ 2638  git add .
+ 2639  git commit -m "adding a doc string"
+ 2640  git add .
+ 2641  git commit -m "adding a doc string"
+ 2642  SKIP=no-commit-to-branch pre-commit run --all-files
+ 2643  git add .
+ 2644  git commit -m "adding a doc string"
+ 2645  SKIP=no-commit-to-branch pre-commit run --all-files
+ 2646  git status
+ 2647  git add .
+ 2648  git commit -m "adding a doc string"
+ 2649  git commit -m "adding a doc string" --no-verify
+ 2650  git push origin main
+ 2651  git add .
+ 2652  git commit -m "first item should end with a period fix" --no-verify
+ 2653  git push origin main
+ 2654  git status
+ 2655  git add big0-constant.py
+ 2656  git commit -m "Big O examples"
+ 2657  git reset --all
+ 2658  git status
+ 2659  git reset
+ 2660  git status
+ 2661  git pull origin main 
+ 2662  git pull upstream main
+ 2663  git pull origin main 
+ 2664  git checkout -b new_test_file
+ 2665  git add big0-constant.py
+ 2666  git commit -m "Big O examples"
+ 2667  git add big0-constant.py
+ 2668  git commit -m "Big O examples"
+ 2669  git add big0-constant.py
+ 2670  git commit -m "Big O examples"
+ 2671  git add big0-constant.py
+ 2672  git commit -m "Big O examples"
+ 2673  git add big0-constant.py
+ 2674  git commit -m "Big O examples"
+ 2675  git add big0-constant.py
+ 2676  git commit -m "Big O examples"
+ 2677  git add .pre-commit-config.yaml
+ 2678  git add .
+ 2679  git commit -m "Big O examples"
+ 2680  git push origin new_test_file 
+ 2681  git satu
+ 2682  git status
+ 2683  git add ruff.toml
+ 2684  git commit -m "Big O examples"
+ 2685  git add ruff.toml
+ 2686  git satus
+ 2687  git stautus
+ 2688  git status
+ 2689  git diff ruff.toml
+ 2690  git commit -m "Big O examples"
+ 2691  git status
+ 2692  git push origin new_test_file 
+ 2693  git status
+ 2694  git add .
+ 2695  git status
+ 2696  git commit -m "Big O examples"
+ 2697  git status
+ 2698  git add .
+ 2699  git commit -m "Big O examples"
+ 2700  git add .
+ 2701  git commit -m "Big O examples"
+ 2702  git add .
+ 2703  git commit -m "Big O examples"
+ 2704  google  E303 too many blank line
+ 2705  git add .
+ 2706  git commit -m "Big O examples"
+ 2707  git add .
+ 2708  git commit -m "Big O examples"
+ 2709  git add .
+ 2710  git commit -m "Big O examples"
+ 2711  git push origin new_test_file 
+ 2712  git status
+ 2713  history 
+ 2714  git commit -m "Big O examples" --no-verify
+ 2715  git push origin new_test_file 
+ 2716  git status
+ 2717  git add .github/workflows/pre-commit.yml
+ 2718  git commit -m "git actions on pull request only"
+ 2719  git status
+ 2720  git diff .
+ 2721  git add .
+ 2722  git staut
+ 2723  git status
+ 2724  git commit -m "git actions on pull request only"
+ 2725  git push origin new_test_file 
+ 2726  git status
+ 2727  git add .
+ 2728  git commit -m "git actions on pull request only"
+ 2729  git status
+ 2730  git commit -m "git actions on pull request only" --no-verify
+ 2731  git status
+ 2732  git push origin new_test_file 
+ 2733  git status
+ 2734  pwd
+ 2735  cd ..
+ 2736  open .
+ 2737  mkdir section-11
+ 2738  cd section-11
+ 2739  echo "# udemy-tpp-section-11" >> README.md
+ 2740  code .
+ 2741  open .
+ 2742  git init\ngit add README.md
+ 2743  git commit -m "Create README with course module info."
+ 2744  git branch -M main\ngit remote add origin https://github.com/sahlas/udemy-tpp-section-11.git\ngit push -u origin main
+ 2745  git add ./images
+ 2746  git rebase main
+ 2747  git commit -m "adding missing images folder."
+ 2748  git rebase main
+ 2749  git push origin main 
+ 2750  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2751  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/section-11/my_file.py
+ 2752  which python
+ 2753  code .
+ 2754  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2755  which python
+ 2756  pwd
+ 2757  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/.pyenv/versions/3.13.3/bin/python
+ 2758  pwd
+ 2759  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11
+ 2760  echo $PYTHONPATH
+ 2761  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/section-11/my_file.py
+ 2762  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11 python my_file.py
+ 2763  echo $PYTHONPATH
+ 2764  pwd
+ 2765  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11 python my_file.py
+ 2766  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11 python my_folder/my_other_other_file.py
+ 2767  ll
+ 2768  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11 python my_folder/my_other_other_file.py
+ 2769  ll /Users/bsahlas/development/repos/udemy/repos/section-11/my_folder/
+ 2770  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos/section-11 python my_folder/my_other_other_file.py
+ 2771  python my_folder/my_other_other_file.py
+ 2772  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos python my_folder/my_other_other_file.py
+ 2773  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos python my_other_other_file.py
+ 2774  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos python my_other_file.py
+ 2775  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos python my_other_other_file.py
+ 2776  PYTHONPATH=$PYTHONPATH:/Users/bsahlas/development/repos/udemy/repos python my_folder/my_other_other_file.py
+ 2777  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/section-11/my_folder/my_other_other_file.py
+ 2778  pwd
+ 2779  python my_folder/my_other_other_file.py
+ 2780  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/section-11/my_folder/my_other_other_file.py
+ 2781  cd  ..
+ 2782  mv ./section-11 ./section11
+ 2783  cd section11
+ 2784  ll
+ 2785  ~/development/repos
+ 2786  ./udemy/repos/section11
+ 2787  ll
+ 2788  code .
+ 2789  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2790  /Users/bsahlas/.pyenv/versions/3.13.3/bin/python /Users/bsahlas/development/repos/udemy/repos/section11/my_folder/my_other_other_file.py
+ 2791  cd ..
+ 2792  mv ./section11 ./packaging
+ 2793  cd packaging
+ 2794  code .
+ 2795  pip install venv ./venv
+ 2796  hitory 
+ 2797  history 
+ 2798  history | less
+ 2799  python -m venv ./venv/
+ 2800  source venv/bin/activate
+ 2801  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2802  clear
+ 2803  pip list
+ 2804  pip install setuptools
+ 2805  pip list
+ 2806  code .
+ 2807  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2808  python setup.py --help
+ 2809  python setup.py --build
+ 2810  python setup.py build
+ 2811  python setup.py build sdist
+ 2812  pip install ./dist/packaging-0.0.0.tar.gz
+ 2813  pip list
+ 2814  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_folder/my_other_other_file.py
+ 2815  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/-.py
+ 2816  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_folder/my_other_other_file.py
+ 2817  python setup.py build sdist
+ 2818  pip install ./dist/packaging-0.0.0.tar.gz
+ 2819  python setup.py build sdist
+ 2820  pip install ./dist/packaging-0.0.0.tar.gz
+ 2821  pip list
+ 2822  pip uninstall packaging 
+ 2823  pip list
+ 2824  python setup.py build sdist
+ 2825  pip install ./dist/packaging-0.0.0.tar.gz
+ 2826  pip list
+ 2827  pip uninstall packaging 
+ 2828  pip list
+ 2829  python setup.py build sdist
+ 2830  pip install ./dist/packaging-0.0.0.tar.gz
+ 2831  pip list
+ 2832  python setup.py build sdist
+ 2833  pip install ./dist/packaging-0.0.0.tar.gz
+ 2834  pip uninstall packaging 
+ 2835  pip list
+ 2836  python setup.py build sdist
+ 2837  pip uninstall packaging 
+ 2838  python setup.py build sdist
+ 2839  pip install ./dist/packaging-0.0.0.tar.gz
+ 2840  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_folder/my_other_other_file.py
+ 2841  clear
+ 2842  pip install .
+ 2843  pip install --editable ./
+ 2844  pip list
+ 2845  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_folder/my_other_other_file.py
+ 2846  git status
+ 2847  touch .gitignore
+ 2848  git status
+ 2849  git add README.md
+ 2850  git add .
+ 2851  git status
+ 2852  git commit -m "Checkpoint Section 11.93"
+ 2853  git push origin main 
+ 2854  git stash
+ 2855  git pull origin main 
+ 2856  git config pull.rebase true
+ 2857  git status
+ 2858  git pull origin main 
+ 2859  git add README.md
+ 2860  git rebase --continue
+ 2861  git pull origin main 
+ 2862  git stash pop
+ 2863  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_folder/my_other_other_file.py
+ 2864  git status
+ 2865  git push
+ 2866  git status
+ 2867  git add .
+ 2868  git satus
+ 2869  git status
+ 2870  git commit -m "Fix .gitignore so python files should be excluded"
+ 2871  git push
+ 2872  pip install numpy
+ 2873  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python
+ 2874  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging/my_file.py
+ 2875  clear
+ 2876  deactivate
+ 2877  rm -rf ./venv
+ 2878  pip install -r requirements.txt
+ 2879  google numpy latest version
+ 2880  python -m venv ./venv/
+ 2881  source venv/bin/activate
+ 2882  pip list
+ 2883  pip install setuptools
+ 2884  pip list
+ 2885  which gcc
+ 2886  clear
+ 2887  python setup.py bdist_wheel
+ 2888  pip list
+ 2889  clear
+ 2890  pip list
+ 2891  python setup.py bdist_wheel
+ 2892  clear
+ 2893  pip list
+ 2894  pip uninstall packaging 
+ 2895  pip uninstall wheel
+ 2896  pip list
+ 2897  python setup.py bdist_wheel
+ 2898  pip list
+ 2899  pip install build
+ 2900  pip list
+ 2901  clear 
+ 2902  python -m build --help
+ 2903  python -m build --sdist --wheel ./
+ 2904  open .
+ 2905  pwd
+ 2906  cd ../
+ 2907  ll
+ 2908  pwd
+ 2909  open .
+ 2910  clear
+ 2911  python -m build --sdist --wheel ./
+ 2912  cd p
+ 2913  cd packaging
+ 2914  python -m build --sdist --wheel ./
+ 2915  pip listd
+ 2916  pip list
+ 2917  clear
+ 2918  git status
+ 2919  git add .
+ 2920  git commit -m "Lesson on python build operations and configs."
+ 2921  git push
+ 2922  clear
+ 2923  python -m build --sdist --wheel ./
+ 2924  git status
+ 2925  git add setup.py
+ 2926  git commit -m "add setup.py changes."
+ 2927  git status
+ 2928  git add .black.toml
+ 2929  git commit -m "add .black.toml."
+ 2930  git add .flake8
+ 2931  git commit -m "add .flake8."
+ 2932  git status
+ 2933  git commit -m "add .isort.cfg" -a  .isort.cfg
+ 2934  git commit -m "add .isort.cfg"  .isort.cfg
+ 2935  git add .isort.cfg
+ 2936  git commit -m "add .isort.cfg"
+ 2937  git status
+ 2938  git rebase --interactive <base>
+ 2939  git rebase --interactive 
+ 2940  git status
+ 2941  git rebase --interactive 
+ 2942  git rebase --interactive .
+ 2943  git rebase --interactive
+ 2944  git status
+ 2945  git push origin main 
+ 2946  git status
+ 2947  git rebase --interactive
+ 2948  git rebase --continue
+ 2949  git rebase --allow-empty
+ 2950  git rebase --abort
+ 2951  git commit
+ 2952  git log
+ 2953  git rebase -i origin/main~4 main
+ 2954  git push origin main 
+ 2955  git pull origin main 
+ 2956  git log
+ 2957  git status
+ 2958  git pull origin main 
+ 2959  git checkout -b new_branch
+ 2960  ga .pre-commit-config.yaml
+ 2961  gc -m "add pre-commit-config."
+ 2962  ga .pylintrc && gc -m "add .pylintrc file."
+ 2963  git lo
+ 2964  git log
+ 2965  git status
+ 2966  ga .setup.cfg && gc -m "add setup.cfg file."
+ 2967  ga setup.cfg && gc -m "add setup.cfg file."
+ 2968  git log
+ 2969  git rebase -i origin/main~3 main
+ 2970  git push origin main 
+ 2971  git push origin main -f
+ 2972  git status
+ 2973  ll
+ 2974  git log
+ 2975  ll
+ 2976  code .
+ 2977  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 2978  clear
+ 2979  ruff check --config ./pyproject.toml
+ 2980  pip install ruff
+ 2981  ruff check --config ./pyproject.toml
+ 2982  clear
+ 2983  git status
+ 2984  git diff REBASE_HEAD 
+ 2985  git diff README.md
+ 2986  git add README.md
+ 2987  git commit -m "Fix the path to image."
+ 2988  git push origin main
+ 2989  clear
+ 2990  python -m build --sdist --wheel ./
+ 2991  ohmyzsh
+ 2992  cd ..
+ 2993  ll
+ 2994  ./packaging
+ 2995  ll
+ 2996  gs
+ 2997  alias
+ 2998  alias | grep status
+ 2999  gst
+ 3000  code .
+ 3001  /usr/bin/python3 /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/bsahlas/.vscode/extensions/ms-python.python-2025.4.0-darwin-arm64/python_files/deactivate/zsh/envVars.txt
+ 3002  python -m build --sdist --wheel ./
+ 3003  clear
+ 3004  gst
+ 3005  source venv/bin/activate
+ 3006  python build --help
+ 3007  pip install build
+ 3008  python build --help
+ 3009  python -m build
+ 3010  python -m build --sdist --wheel ./
+ 3011  gst
+ 3012  git add .
+ 3013  git commit -m "Checkpoint Section 11.98"
+ 3014  git push origin main
+ 3015  clear
+ 3016  python -m build --sdist --wheel ./
+ 3017  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/state_info.py
+ 3018  python -m packaging_demo.state_info
+ 3019  python -m build --sdist --wheel ./
+ 3020  python -m packaging_demo.state_info
+ 3021  clear
+ 3022  python -m packaging_demo.state_info/Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python
+ 3023  cities = json.loads(cities_json_contents)
+ 3024  python -m build --sdist --wheel ./
+ 3025  clear
+ 3026  python -m build --sdist --wheel ./
+ 3027  clear
+ 3028  python -m packaging_demo.states
+ 3029  python -m packaging_demo.states_info
+ 3030  python -m build --sdist --wheel ./
+ 3031  clear
+ 3032  python -m packaging_demo.states_info
+ 3033  clear
+ 3034  python -m packaging_demo.states_info
+ 3035  clear
+ 3036  python -m packaging_demo.states_info
+ 3037  python -m build --sdist --wheel ./
+ 3038  pwd
+ 3039  ./dist
+ 3040  ll
+ 3041  unzip *.whl
+ 3042* /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging_demo/states_info.py
+ 3043* clear
+ 3044* /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging_demo/states_info.py
+ 3045* clear
+ 3046  /Users/bsahlas/development/repos/udemy/repos/packaging/venv/bin/python /Users/bsahlas/development/repos/udemy/repos/packaging/packaging_demo/states_info.py
+ 3047  clear
+ 3048  pip install .
+ 3049  clear
+ 3050  pip install .
+ 3051  python -m build --sdist --wheel ./
+ 3052  pip install .
+ 3053  history | grep pip
+ 3054  clear
+ 3055  pip uninstall .
+ 3056  pip uninstall p
+ 3057  pip uninstall packaging 
+ 3058  pip uninstall packaging_dem
+ 3059  pip uninstall packaging_demo
+ 3060  clear
+ 3061  history
+ 3062  python -m build --sdist --wheel ./
+ 3063  history | grep venv
+ 3064  pip install venv ./venv
+ 3065  python -m venv ./venv/
+ 3066  source venv/bin/activate
+ 3067  python -m build --sdist --wheel ./
+ 3068  source venv/bin/activate
+ 3069  clear
+ 3070  which python
+ 3071  python -m build --sdist --wheel ./
+ 3072  pip install build
+ 3073  python -m build --sdist --wheel ./
+ 3074  google setuptools.package-data
+ 3075  python -m build --sdist --wheel ./
+ 3076  pip install wheel
+ 3077  clear
+ 3078  python -m build --sdist --wheel ./
+ 3079  clear
+ 3080  python -m build --sdist --wheel ./

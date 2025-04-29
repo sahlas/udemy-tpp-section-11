@@ -1,5 +1,8 @@
 .DS_Store
 build/
 dist/
-*.egg-info/
+*.egg-info
+.mypy_cache
+.ruff_cache
 __pycache__/
+.vscode

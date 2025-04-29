@@ -1,3 +1,70 @@
 [build-system]
-# Minimum requirements for the build system to execute.
-requires = ["setuptools", "wheel"]  # PEP 508 specifications.
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+mypkg = ["*.json", "*.png"]
+
+[project]
+name = "packaging_demo"
+version = "0.0.0"
+description = "Lovely Spam! Wonderful Spam!"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+authors = [
+  {email = "hi@pradyunsg.me"},
+  {name = "Tzu-ping Chung"}
+]
+maintainers = [
+  {name = "Brett Cannon", email = "brett@python.org"}
+]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+dependencies = [
+    "numpy",
+    "fastapi"
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "mypy", "black"]
+colors = ["rich"]
+all = ["packaging-demo[dev, colors]"]
+
+[project.urls]
+homepage = "https://example.com"
+documentation = "https://readthedocs.org"
+repository = "https://github.com"
+changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[project.entry-points."spam.magical"]
+tomatoes = "spam:main_tomatoes"
+
+[tool.ruff]
+# [lint]
+# 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
+lint.select = ["E4", "E7", "E9", "F", "B"]
+
+# 2. Avoid enforcing line-length violations (`E501`)
+lint.ignore = ["E501"]
+
+# 3. Avoid trying to fix flake8-bugbear (`B`) violations.
+lint.unfixable = ["B"]
+
+# 4. Ignore `E402` (import violations) in all `__init__.py` files, and in selected subdirectories.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["E402"]
+
+[tool.black]
+line-length = 119
+
+[tool.flake8]
+docstring-convention = "all"
+# it's not a bug that we aren't using all of hacking
+ignore = ["D107", "D212", "E501",  "W503",  "W605",  "D203"]
+radon-max-cc = 10
+exclude = ["venv"]

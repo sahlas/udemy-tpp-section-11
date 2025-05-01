@@ -1,7 +1,41 @@
 #!/bin/bash
-set -ex #if any line fails the entire program fails
+
+set -e #if any line fails the entire program fails
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>& 1 && pwd )"
+
+function load-dotenv {
+    # load environment variables from .env file
+    while IFS= read -r line; do
+        if [[ $line =~ ^[a-zA-Z_][a-zA-Z0-9_]*= ]]; then
+            export "$line"
+        fi
+    done < "${THIS_DIR}/.env"
+
+    if [ -f "${THIS_DIR}/.env" ]; then
+        export $(grep -v '^#' "${THIS_DIR}/.env" | xargs)
+    fi
+}
+
+function usage {
+    echo "Usage: $0 <task> <args>"
+    echo "Tasks:"
+    echo "  install       Install the package and its dependencies"
+    echo "  build         Build the package"
+    echo "  publish       Publish the package to PyPI"
+    echo "  install_dev   Install the package in development mode"
+    echo "  clean         Clean up cached files"
+    echo "  test          Run tests"
+    echo "  lint          Run linters"
+    echo "  format        Run formatters"
+    echo "  check         Run linters and formatters"
+    echo "  run           Run the program"
+}
+function help {
+    echo "$0 <task> <args>"
+    echo "Tasks:"
+    compgen -A function | cat -n
+}
 
 function install {
     pip install --upgrade pip
@@ -12,9 +46,36 @@ function build {
     python -m build --sdist --wheel  "${THIS_DIR}/"
 }
 
-function publish {
+function publish:test {
+    load-dotenv
     # publish the package to pypi
-    python -m twine upload --repository testpypi dist/*
+    python -m twine upload dist/* \
+        --repository testpypi \
+        --username "$TWINE_USERNAME" \
+        --password "$TWINE_PASSWORD" \
+        --skip-existing
+}
+
+function publish:prod {
+    load-dotenv
+    # publish the package to pypi
+    python -m twine upload dist/* \
+        --repository pypi \
+        --username "$TWINE_PROD_USERNAME" \
+        --password "$TWINE_PROD_PASSWORD" \
+        --skip-existing
+}
+
+function release:test {
+    lint
+    clean
+    build
+    publish:test
+}
+
+function release:prod {
+    release:test
+    publish:prod
 }
 
 function install_dev {
@@ -72,11 +133,11 @@ function run_tests {
     pytest -v --tb=short --disable-warnings --maxfail=1
 }
 
-function help {
-    echo "$0 <task> <args>"
-    echo "Tasks:"
-    compgen -A function | cat -n
-}
+# function help {
+#     echo "$0 <task> <args>"
+#     echo "Tasks:"
+#     compgen -A function | cat -n
+# }
 
 TIMEFORMAT="Task completed in %3lR"
 time ${@:-help} # if nothing in @ do left

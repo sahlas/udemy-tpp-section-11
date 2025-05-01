@@ -1,4 +1,4 @@
-install: 
+install:
 	$(echo VAR=hello)
 	echo $VAR
 

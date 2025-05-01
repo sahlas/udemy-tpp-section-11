@@ -13,7 +13,7 @@ find . \
   -exec rm -r {} +
 
   # rebuild and unzip the wheel
-  python -m build --sdist --wheel ./
-  cd dist
-  unzip *.whl
-  cd ..
+  # python -m build --sdist --wheel ./
+  # cd dist
+  # unzip *.whl
+  # cd ..

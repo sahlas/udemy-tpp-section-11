@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-    
+  workflow_dispatch:
     
 env: # This is the environment variables section Global variables
   TEST_PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}

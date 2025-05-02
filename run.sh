@@ -47,7 +47,7 @@ function build {
 }
 
 function publish:test {
-    load-dotenv
+    # load-dotenv
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository testpypi \
@@ -57,7 +57,7 @@ function publish:test {
 }
 
 function publish:prod {
-    load-dotenv
+    # load-dotenv
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository pypi \

@@ -38,7 +38,7 @@ function help {
 }
 
 function install {
-    pip install --upgrade pip
+    python -m pip install --upgrade pip
     python -m pip install --editable "${THIS_DIR}/[dev]"
 }
 

@@ -51,8 +51,8 @@ function publish:test {
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository testpypi \
-        --username "$TWINE_USERNAME" \
-        --password "$TWINE_PASSWORD" \
+        --username "$TEST_PYPI_USERNAME" \
+        --password "$TEST_PYPI_PASSWORD" \
         --skip-existing
 }
 
@@ -61,8 +61,8 @@ function publish:prod {
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository pypi \
-        --username "$TWINE_PROD_USERNAME" \
-        --password "$TWINE_PROD_PASSWORD" \
+        --username "$PROD_PYPI_USERNAME" \
+        --password "$PROD_PYPI_PASSWORD" \
         --skip-existing
 }
 

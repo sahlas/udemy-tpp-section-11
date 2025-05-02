@@ -11,7 +11,8 @@ version = "0.0.5"
 description = "udemy.com - TPP Course working with PyPI"
 readme = "README.md"
 requires-python = ">=3.13"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
 keywords = ["tpp", "continuous delivery", "python"]
 authors = [
   {email = "bill.sahlas@gmail.com"},

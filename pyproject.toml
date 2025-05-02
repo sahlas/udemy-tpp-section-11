@@ -25,7 +25,7 @@ classifiers = [
 
 dependencies = [
     "numpy",
-    "fastapi"
+    "twine"
 ]
 
 [project.optional-dependencies]

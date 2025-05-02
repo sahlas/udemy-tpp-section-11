@@ -4,17 +4,15 @@ set -e #if any line fails the entire program fails
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>& 1 && pwd )"
 
-function load-dotenv {
-    # load environment variables from .env file
-    while IFS= read -r line; do
-        if [[ $line =~ ^[a-zA-Z_][a-zA-Z0-9_]*= ]]; then
-            export "$line"
-        fi
-    done < "${THIS_DIR}/.env"
-
-    if [ -f "${THIS_DIR}/.env" ]; then
-        export $(grep -v '^#' "${THIS_DIR}/.env" | xargs)
+function try-load-dotenv {
+    if [ ! -f "${THIS_DIR}/.env" ]; then
+        echo "no .env file found"
+        return 1
     fi
+        # load environment variables from .env file
+        while read -r line; do
+                export "$line"
+        done < <(grep -v '^#' "${THIS_DIR}/.env" | grep -v '^$')
 }
 
 function usage {
@@ -47,7 +45,7 @@ function build {
 }
 
 function publish:test {
-    # load-dotenv
+    try-load-dotenv || true
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository testpypi \
@@ -57,7 +55,7 @@ function publish:test {
 }
 
 function publish:prod {
-    # load-dotenv
+    try-load-dotenv || true
     # publish the package to pypi
     python -m twine upload dist/* \
         --repository pypi \
@@ -109,6 +107,10 @@ function lint {
     # black --check --line-length 120
     # isort --check-only --profile black
     pre-commit run --all-files
+}
+
+function lint:ci {
+    SKIP=no-commit-to-branch pre-commit run --all-files
 }
 
 function format {

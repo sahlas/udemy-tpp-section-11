@@ -38,12 +38,12 @@ function help {
 }
 
 function install {
-    python -m pip install --upgrade pip
-    python -m pip install --editable "${THIS_DIR}/[dev]"
+    # python -m pip install --upgrade pip
+    python -m pip install --editable "$THIS_DIR/[dev]"
 }
 
 function build {
-    python -m build --sdist --wheel  "${THIS_DIR}/"
+    python -m build --sdist --wheel  "$THIS_DIR/"
 }
 
 function publish:test {

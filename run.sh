@@ -101,11 +101,6 @@ function test {
 }
 
 function lint {
-    # run linters
-    # flake8 --max-line-length=120 --ignore=E501,E203,E266,E402,W503,W504,E731,E722,E501,E722,E1101,E1102,E1103,E1104,E1105,E1106,E1107,E1108,E1109,E1110,E1111,E1112,W504,W505,W506,W507,W508,W509,W510,W511,W512,W513,W514,W515,W516,W517,W518,W519,W520,W521,W522,W523,W524,W525,W526,W527,W528,W529
-    # mypy --ignore-missing-imports --follow-imports=skip --strict --show-error-codes --show-column-numbers
-    # black --check --line-length 120
-    # isort --check-only --profile black
     pre-commit run --all-files
 }
 
@@ -134,12 +129,6 @@ function run_tests {
     # run tests
     pytest -v --tb=short --disable-warnings --maxfail=1
 }
-
-# function help {
-#     echo "$0 <task> <args>"
-#     echo "Tasks:"
-#     compgen -A function | cat -n
-# }
 
 TIMEFORMAT="Task completed in %3lR"
 time ${@:-help} # if nothing in @ do left

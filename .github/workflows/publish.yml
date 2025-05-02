@@ -1,5 +1,5 @@
 # .github/workflows/<some name>.yaml
-name: Publish
+name: Build, Test and Publish
 
 on:
   pull_request:

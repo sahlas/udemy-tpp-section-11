@@ -8,10 +8,10 @@ on:
     branches:
       - main
   workflow_dispatch:
-    
+
 env: # This is the environment variables section Global variables
   TEST_PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
-  
+
 
 jobs:
   build-test-and-publish:
@@ -49,23 +49,23 @@ jobs:
         run: |
           /bin/bash -x run.sh build
 
-        #post merge
+      #post merge
       - name: Publish to TestPyPI
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           /bin/bash -x run.sh publish:test
         env:
-            TEST_PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }} #github expression
+          TEST_PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }} #github expression
       - name: Publish to ProdPyPI
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           /bin/bash -x run.sh publish:prod
         env:
-            TEST_PYPI_PASSWORD: ${{ secrets.PROD_PYPI_PASSWORD }} #github expression
+          TEST_PYPI_PASSWORD: ${{ secrets.PROD_PYPI_PASSWORD }} #github expression
       - name: Push tags
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-              git push origin --tags
+            git push origin --tags
 
   # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#example-printing-context-information-to-the-log
   # dump_contexts_to_log:
@@ -103,8 +103,8 @@ jobs:
   #       env:
   #         VARS_CONTEXT: ${{ toJson(vars) }}
   #       run: echo "$VARS_CONTEXT"
-        
-        
+
+
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
